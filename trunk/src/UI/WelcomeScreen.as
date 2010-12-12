@@ -1,15 +1,15 @@
 package UI 
 {
+	import caurina.transitions.Tweener;
 	import com.pblabs.engine.PBE;
 	import com.pblabs.engine.resource.SWFResource;
 	import com.pblabs.screens.ImageScreen;
 	import flash.display.MovieClip;
 	import flash.display.SimpleButton;
 	import flash.events.MouseEvent;
+	import flash.system.System;
 	import RAEnums.RAScreenEnum;
 	import RAEnums.RASoundEnum;
-	import flash.system.System;
-	import caurina.transitions.Tweener;
 	
 	/**
 	 * ...
@@ -26,7 +26,6 @@ package UI
 		
 		private var m_btnStart:SimpleButton = null;
 		private var m_btnExit:SimpleButton = null;
-		private var m_btnAoiSola:SimpleButton = null;
 		
 		//-------------------------------- public function --------------------------------
 		
@@ -76,16 +75,13 @@ package UI
 			
 			m_btnStart = m_ui.getChildByName( "btnStart" ) as SimpleButton;
 			m_btnExit = m_ui.getChildByName( "btnExit" ) as SimpleButton;
-			m_btnAoiSola = m_ui.getChildByName( "btnAoiSola" ) as SimpleButton;
 			
 			//add event listener
 			m_btnStart.addEventListener( MouseEvent.CLICK, _onStart );
 			m_btnExit.addEventListener( MouseEvent.CLICK, _onExit );
-			m_btnAoiSola.addEventListener( MouseEvent.CLICK, _onAoiSola );
 			
 			m_btnStart.addEventListener( MouseEvent.MOUSE_OVER, _onButtonRollOver );
 			m_btnExit.addEventListener( MouseEvent.MOUSE_OVER, _onButtonRollOver );
-			m_btnAoiSola.addEventListener( MouseEvent.MOUSE_OVER, _onButtonRollOver );
 		}
 		
 		//enable or disable all the control
@@ -95,7 +91,6 @@ package UI
 			{
 				m_btnStart.enabled = enable;
 				m_btnExit.enabled = enable;
-				m_btnAoiSola.enabled = enable;
 			}
 		}
 		
@@ -127,12 +122,6 @@ package UI
 		private function _onExit( evt:MouseEvent ):void
 		{
 			System.exit( 0 );
-		}
-		
-		//click aoiSola
-		private function _onAoiSola( evt:MouseEvent ):void
-		{
-			PBE.screenManager.goto( RAScreenEnum.RA_AOISOLA_SCREEN );
 		}
 		
 		//when mouse over , play the snd

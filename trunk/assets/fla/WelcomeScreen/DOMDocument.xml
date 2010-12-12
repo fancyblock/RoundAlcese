@@ -42,7 +42,7 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="content" color="#9933CC" autoNamed="false">
+                    <DOMLayer name="content" color="#9933CC" locked="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
@@ -63,7 +63,7 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="button" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+                    <DOMLayer name="button" color="#4FFF4F" locked="true" current="true" isSelected="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
@@ -73,14 +73,6 @@
                                              </matrix>
                                              <transformationPoint>
                                                   <Point/>
-                                             </transformationPoint>
-                                        </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="buttons rounded stripes/rounded stripes red" name="btnAoiSola" symbolType="button" blendMode="alpha">
-                                             <matrix>
-                                                  <Matrix a="1.31320190429688" d="1.15383911132813" tx="514.05" ty="569.5"/>
-                                             </matrix>
-                                             <transformationPoint>
-                                                  <Point x="0.05"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
                                         <DOMSymbolInstance libraryItemName="buttons rounded stripes/rounded stripes blue" name="btnExit" symbolType="button">
