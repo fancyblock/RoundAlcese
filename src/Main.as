@@ -1,7 +1,10 @@
 package 
 {
-	import flash.display.Sprite;
 	import com.pblabs.engine.PBE;
+	import com.pblabs.screens.SplashScreen;
+	import flash.display.Sprite;
+	import RAEnums.RAScreenEnum;
+	import UI.WelcomeScreen;
 	
 	/**
 	 * ...
@@ -23,6 +26,17 @@ package
 		public function Main():void 
 		{
 			PBE.startup( this );
+			
+			//embedded the resource
+			new RAResources();
+			
+			//regist all the ui
+			PBE.screenManager.registerScreen( RAScreenEnum.RA_WELCOME_SCREEN, new WelcomeScreen() );
+			PBE.screenManager.registerScreen( RAScreenEnum.RA_AOISOLA_SCREEN, new SplashScreen( "../assets/Background/AoiSolaBG.png", RAScreenEnum.RA_WELCOME_SCREEN ) );
+			//[unfinished]
+			
+			//show start screen
+			PBE.screenManager.push( RAScreenEnum.RA_WELCOME_SCREEN );
 		}
 		
 		//-------------------------------- private function --------------------------------
