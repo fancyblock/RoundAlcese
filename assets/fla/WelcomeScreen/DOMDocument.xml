@@ -2,7 +2,11 @@
      <folders>
           <DOMFolderItem name="buttons rounded stripes" itemID="4d047bc1-000002ee"/>
      </folders>
+     <media>
+          <DOMBitmapItem name="paper.png" itemID="4d04f7bd-00000021" sourceExternalFilepath=".\LIBRARY\paper.png" sourceLastImported="1292171117" originalCompressionType="lossless" quality="50" href="paper.png" bitmapDataHRef="M 1 1292171149.dat" frameRight="12000" frameBottom="15360"/>
+     </media>
      <symbols>
+          <Include href="bg.xml" loadImmediate="false"/>
           <Include href="buttons rounded stripes/rounded stripes blue.xml" itemIcon="0" loadImmediate="false"/>
           <Include href="buttons rounded stripes/rounded stripes blue glow.xml" loadImmediate="false"/>
           <Include href="buttons rounded stripes/rounded stripes gold.xml" itemIcon="0" loadImmediate="false"/>
@@ -13,54 +17,91 @@
      <timelines>
           <DOMTimeline name="场景 1">
                <layers>
-                    <DOMLayer name="title" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+                    <DOMLayer name="title" color="#9933CC" locked="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
                                         <DOMStaticText fontRenderingMode="bitmap" left="-57.7" width="259.4" height="42" autoExpand="true" isSelectable="false">
                                              <matrix>
-                                                  <Matrix tx="308" ty="67"/>
+                                                  <Matrix tx="314.6" ty="133"/>
                                              </matrix>
                                              <textRuns>
                                                   <DOMTextRun>
                                                        <characters>围捕阿尔西斯</characters>
                                                        <textAttrs>
-                                                            <DOMTextAttrs alignment="center" letterSpacing="1.2" size="42" bitmapSize="840" face="YouYuan" fillColor="#CCCC33"/>
+                                                            <DOMTextAttrs alignment="center" letterSpacing="1.2" size="42" bitmapSize="840" face="YouYuan"/>
                                                        </textAttrs>
                                                   </DOMTextRun>
                                              </textRuns>
                                              <filters>
-                                                  <GlowFilter blurX="7" blurY="7" color="#33CC66"/>
-                                                  <DropShadowFilter distance="6"/>
+                                                  <GlowFilter blurX="12" blurY="12" color="#33CC66" quality="3"/>
+                                                  <DropShadowFilter blurX="20" blurY="20" distance="6" quality="3"/>
                                              </filters>
                                         </DOMStaticText>
                                    </elements>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="button" color="#4FFF4F" locked="true" autoNamed="false">
+                    <DOMLayer name="content" color="#9933CC" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMStaticText fontRenderingMode="bitmap" left="-166.6" width="447.5" height="98" isSelectable="false">
+                                             <matrix>
+                                                  <Matrix tx="334.1" ty="223.9"/>
+                                             </matrix>
+                                             <textRuns>
+                                                  <DOMTextRun>
+                                                       <characters>    在遥远的哈克斯森林深处，有一个魔王在那建立了一座地下城。在庞大的地下城里，有一座堆满宝藏的金库。&#xD;    坚强的勇者阿尔西斯，跋山涉水来到了魔王的地下城中，对魔王的金库伸出了罪恶之手。。。</characters>
+                                                       <textAttrs>
+                                                            <DOMTextAttrs size="18" bitmapSize="360" face="SimHei"/>
+                                                       </textAttrs>
+                                                  </DOMTextRun>
+                                             </textRuns>
+                                        </DOMStaticText>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="button" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
                                         <DOMSymbolInstance libraryItemName="buttons rounded stripes/rounded stripes gold" name="btnStart" symbolType="button">
                                              <matrix>
-                                                  <Matrix a="1.31320190429688" d="1.15383911132813" tx="372.6" ty="543.2"/>
+                                                  <Matrix a="1.31320190429688" d="1.15383911132813" tx="380.05" ty="569.2"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="buttons rounded stripes/rounded stripes red" name="btnAoiSola" symbolType="button">
+                                        <DOMSymbolInstance libraryItemName="buttons rounded stripes/rounded stripes red" name="btnAoiSola" symbolType="button" blendMode="alpha">
                                              <matrix>
-                                                  <Matrix a="1.31320190429688" d="1.15383911132813" tx="372.6" ty="589.65"/>
+                                                  <Matrix a="1.31320190429688" d="1.15383911132813" tx="514.05" ty="569.5"/>
                                              </matrix>
                                              <transformationPoint>
-                                                  <Point/>
+                                                  <Point x="0.05"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
                                         <DOMSymbolInstance libraryItemName="buttons rounded stripes/rounded stripes blue" name="btnExit" symbolType="button">
                                              <matrix>
-                                                  <Matrix a="1.31320190429688" d="1.15383911132813" tx="372.6" ty="636.65"/>
+                                                  <Matrix a="1.31320190429688" d="1.15383911132813" tx="380.05" ty="606.65"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="bg" color="#4FFF4F" locked="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="bg" name="" blendMode="hardlight" centerPoint3DX="386" centerPoint3DY="381">
+                                             <matrix>
+                                                  <Matrix tx="386" ty="381"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point/>
@@ -376,6 +417,13 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="82908" publishTime="1292171964"/>
+          <PublishItem publishSize="82903" publishTime="1292171831"/>
+          <PublishItem publishSize="76589" publishTime="1292171305"/>
+          <PublishItem publishSize="4642" publishTime="1292170483"/>
+          <PublishItem publishSize="4643" publishTime="1292170366"/>
+          <PublishItem publishSize="4643" publishTime="1292170347"/>
+          <PublishItem publishSize="4611" publishTime="1292140224"/>
           <PublishItem publishSize="4611" publishTime="1292140139"/>
           <PublishItem publishSize="4610" publishTime="1292140128"/>
           <PublishItem publishSize="4588" publishTime="1292140065"/>
