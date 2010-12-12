@@ -1,0 +1,28 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="buttons rounded stripes/rounded stripes red glow" itemID="427e4470-0000b4e6" sourceFlashFilepath="..\group11_12_073105.fla" sourceLibraryItemHRef="rounded stripes red glow" sourceLastModified="1115600135" lastModified="1115600135">
+  <timeline>
+    <DOMTimeline name="rounded stripes red glow">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#F32525"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!673 -174[#2B1.FE #FFFF64.41 700 -133.5!700 -133.5[709 #FFFF92.3F 710 -84!710 -84|710 84!710 84[710 #6C.FF 700 133!700 133[#2B1.FE #9A.FF 673 173!673 173[636 209 584 210!584 210|-584 210!-584 210[-610 210 -634 200!-634 200[#FFFD6F.FF
+ #BD.FF -674 173!-674 173[#FFFD4C.BF #9A.FF -701.5 133!-701.5 133[#FFFD39.BF #6C.FF -710 84!-710 84|-710 -84!-710 -84[#FFFD39.BF #FFFF92.3F -701.5 -133.5!-701.5 -133.5[#FFFD4C.BF #FFFF64.41 -674 -174!-674 -174[#FFFD6F.FF -191 -634 -201
+!-634 -201[-610 #FFFF2D.FF -584 -210!-584 -210|584 -210!584 -210[636 #FFFF2D.FF 673 -174"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

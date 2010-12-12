@@ -1,11 +1,72 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#000000" width="760" height="700" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" adjustViewAngle3D="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+     <folders>
+          <DOMFolderItem name="buttons rounded stripes" itemID="4d047bc1-000002ee"/>
+     </folders>
+     <symbols>
+          <Include href="buttons rounded stripes/rounded stripes blue.xml" itemIcon="0" loadImmediate="false"/>
+          <Include href="buttons rounded stripes/rounded stripes blue glow.xml" loadImmediate="false"/>
+          <Include href="buttons rounded stripes/rounded stripes gold.xml" itemIcon="0" loadImmediate="false"/>
+          <Include href="buttons rounded stripes/rounded stripes gold glow.xml" loadImmediate="false"/>
+          <Include href="buttons rounded stripes/rounded stripes red.xml" itemIcon="0" loadImmediate="false"/>
+          <Include href="buttons rounded stripes/rounded stripes red glow.xml" loadImmediate="false"/>
+     </symbols>
      <timelines>
           <DOMTimeline name="场景 1">
                <layers>
-                    <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
+                    <DOMLayer name="title" color="#9933CC" current="true" isSelected="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
-                                   <elements/>
+                                   <elements>
+                                        <DOMStaticText fontRenderingMode="bitmap" left="-57.7" width="259.4" height="42" autoExpand="true" isSelectable="false">
+                                             <matrix>
+                                                  <Matrix tx="308" ty="67"/>
+                                             </matrix>
+                                             <textRuns>
+                                                  <DOMTextRun>
+                                                       <characters>围捕阿尔西斯</characters>
+                                                       <textAttrs>
+                                                            <DOMTextAttrs alignment="center" letterSpacing="1.2" size="42" bitmapSize="840" face="YouYuan" fillColor="#CCCC33"/>
+                                                       </textAttrs>
+                                                  </DOMTextRun>
+                                             </textRuns>
+                                             <filters>
+                                                  <GlowFilter blurX="7" blurY="7" color="#33CC66"/>
+                                                  <DropShadowFilter distance="6"/>
+                                             </filters>
+                                        </DOMStaticText>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="button" color="#4FFF4F" locked="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="buttons rounded stripes/rounded stripes gold" name="btnStart" symbolType="button">
+                                             <matrix>
+                                                  <Matrix a="1.31320190429688" d="1.15383911132813" tx="372.6" ty="543.2"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="buttons rounded stripes/rounded stripes red" name="btnAoiSola" symbolType="button">
+                                             <matrix>
+                                                  <Matrix a="1.31320190429688" d="1.15383911132813" tx="372.6" ty="589.65"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="buttons rounded stripes/rounded stripes blue" name="btnExit" symbolType="button">
+                                             <matrix>
+                                                  <Matrix a="1.31320190429688" d="1.15383911132813" tx="372.6" ty="636.65"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
@@ -315,7 +376,13 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="532" publishTime="1292072692"/>
-          <PublishItem publishSize="533" publishTime="1292072664"/>
+          <PublishItem publishSize="4611" publishTime="1292140139"/>
+          <PublishItem publishSize="4610" publishTime="1292140128"/>
+          <PublishItem publishSize="4588" publishTime="1292140065"/>
+          <PublishItem publishSize="2983" publishTime="1292139865"/>
+          <PublishItem publishSize="3064" publishTime="1292139803"/>
+          <PublishItem publishSize="2399" publishTime="1292139681"/>
+          <PublishItem publishSize="1855" publishTime="1292139627"/>
+          <PublishItem publishSize="528" publishTime="1292139343"/>
      </publishHistory>
 </DOMDocument>
