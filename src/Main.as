@@ -4,7 +4,9 @@ package
 	import com.pblabs.screens.SplashScreen;
 	import flash.display.Sprite;
 	import RAEnums.RAScreenEnum;
+	import UI.FiendCityScreen;
 	import UI.WelcomeScreen;
+	import flash.system.fscommand;
 	
 	/**
 	 * ...
@@ -30,9 +32,12 @@ package
 			//embedded the resource
 			new RAResources();
 			
+			//flash player setting
+			fscommand( "allowscale", "false" );
+			
 			//regist all the ui
 			PBE.screenManager.registerScreen( RAScreenEnum.RA_WELCOME_SCREEN, new WelcomeScreen() );
-			PBE.screenManager.registerScreen( RAScreenEnum.RA_AOISOLA_SCREEN, new SplashScreen( "../assets/Background/AoiSolaBG.png", RAScreenEnum.RA_WELCOME_SCREEN ) );
+			PBE.screenManager.registerScreen( RAScreenEnum.RA_FIENDCITY_SCREEN, new FiendCityScreen() );
 			//[unfinished]
 			
 			//show start screen
