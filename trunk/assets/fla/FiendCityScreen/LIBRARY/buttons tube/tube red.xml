@@ -1,0 +1,276 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="buttons tube/tube red" itemID="427d0b12-00006980" sourceLibraryItemHRef="buttons tube/tube orange copy" symbolType="button" lastModified="1292254735">
+  <timeline>
+    <DOMTimeline name="tube red" currentFrame="1">
+      <layers>
+        <DOMLayer name="hint" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" duration="3" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="hintFrame4" name="" selected="true">
+                  <matrix>
+                    <Matrix tx="0.2" ty="28.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="84.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="text" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="3" keyMode="9728">
+              <elements>
+                <DOMStaticText fontRenderingMode="bitmap" left="1.9" width="23.2" height="12.95" autoExpand="true" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="-13.5" ty="-6.5"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>其 他</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" size="10" bitmapSize="200" face="MicrosoftYaHei"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="center" color="#FFFF4F" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <LinearGradient>
+                        <matrix>
+                          <Matrix a="-0.0034637451171875" b="-0.009552001953125" c="0.000946044921875" d="-0.0003204345703125" tx="5.85" ty="0.15"/>
+                        </matrix>
+                        <GradientEntry color="#FEA3A3" ratio="0"/>
+                        <GradientEntry color="#FFFFFF" ratio="1"/>
+                      </LinearGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!523.5 -148[#22D.A #FFFF78.4B 584 -114!584 -114[#262.11 #FFFFA4.AD 624.5 -63!624.5 -63[#27F.0A #FFFFDF.16 640 0!640 0[#280.02 #1F.F1 624.5 62!624.5 62[#262.11 #5A.52 584 113!584 113[#22D.A #86.B4 523.5 147!523.5 147[#1E8.B #9F.25 450
+ 160!450 160|-451 160!-451 160[-489.6875 #A0.16 -524.5 147!-524.5 147[#FFFDD1.9F #86.B4 -584.5 113!-584.5 113[#FFFD9D.2E #5A.52 -625.5 62!-625.5 62[#FFFD7F.FA #1F.F1 -640 0!-640 0[#FFFD7F.FA #FFFFDF.16 -625.5 -63!-625.5 -63[#FFFD9D.2E
+ #FFFFA4.AD -584.5 -114!-584.5 -114[#FFFDD1.9F #FFFF78.4B -524.5 -148!-524.5 -148[-489.6875 #FFFF5F.E2 -451 -160!-451 -160|450 -160!450 -160[#1E8.B #FFFF5F.E2 523.5 -148"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFC4C4"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!523.5 -148[#22D.A #FFFF78.4B 584 -114!584 -114[#262.11 #FFFFA4.AD 624.5 -63!624.5 -63[#27F.0A #FFFFDF.16 640 0!640 0[#280.02 #1F.F1 624.5 62!624.5 62[#262.11 #5A.52 584 113!584 113[#22D.A #86.B4 523.5 147!523.5 147[#1E8.B #9F.25 450
+ 160!450 160|-451 160!-451 160[-489.6875 #A0.16 -524.5 147!-524.5 147[#FFFDD1.9F #86.B4 -584.5 113!-584.5 113[#FFFD9D.2E #5A.52 -625.5 62!-625.5 62[#FFFD7F.FA #1F.F1 -640 0!-640 0[#FFFD7F.FA #FFFFDF.16 -625.5 -63!-625.5 -63[#FFFD9D.2E
+ #FFFFA4.AD -584.5 -114!-584.5 -114[#FFFDD1.9F #FFFF78.4B -524.5 -148!-524.5 -148[-489.6875 #FFFF5F.E2 -451 -160!-451 -160|450 -160!450 -160[#1E8.B #FFFF5F.E2 523.5 -148"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <LinearGradient>
+                        <matrix>
+                          <Matrix a="-0.0034637451171875" b="-0.009552001953125" c="0.000946044921875" d="-0.0003204345703125" tx="5.85" ty="0.15"/>
+                        </matrix>
+                        <GradientEntry color="#FE4545" ratio="0"/>
+                        <GradientEntry color="#FFC4C4" ratio="1"/>
+                      </LinearGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!523.5 -148[#22D.A #FFFF78.4B 584 -114!584 -114[#262.11 #FFFFA4.AD 624.5 -63!624.5 -63[#27F.0A #FFFFDF.16 640 0!640 0[#280.02 #1F.F1 624.5 62!624.5 62[#262.11 #5A.52 584 113!584 113[#22D.A #86.B4 523.5 147!523.5 147[#1E8.B #9F.25 450
+ 160!450 160|-451 160!-451 160[-489.6875 #A0.16 -524.5 147!-524.5 147[#FFFDD1.9F #86.B4 -584.5 113!-584.5 113[#FFFD9D.2E #5A.52 -625.5 62!-625.5 62[#FFFD7F.FA #1F.F1 -640 0!-640 0[#FFFD7F.FA #FFFFDF.16 -625.5 -63!-625.5 -63[#FFFD9D.2E
+ #FFFFA4.AD -584.5 -114!-584.5 -114[#FFFDD1.9F #FFFF78.4B -524.5 -148!-524.5 -148[-489.6875 #FFFF5F.E2 -451 -160!-451 -160|450 -160!450 -160[#1E8.B #FFFF5F.E2 523.5 -148"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="center border" color="#FF4FFF" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF0000"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!540 -166[575 #FFFF67.B5 602 -128!602 -128[629 #FFFF99.53 644 -71!644 -71[659 #FFFFDA.E9 660 0!660 0[660 #24.0F 644 70!644 70[629 #65.AC 602 127!602 127[575 #97.4B 540 165!540 165[504 #B2.DA 464 180!464 180|-465 180!-465 180[-505 #B3.E9
+ -541 165!-541 165[-576 #97.4B -603 127!-603 127[-630 #65.AC -645 70!-645 70[-660 #24.0F -660 0!-660 0[-660 #FFFFDA.E9 -645 -71!-645 -71[-630 #FFFF99.53 -603 -128!-603 -128[-576 #FFFF67.B5 -541 -166!-541 -166[-505 #FFFF4C.1E -465 -180
+!-465 -180|464 -180!464 -180[504 #FFFF4C.1E 540 -166"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF5555"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!540 -166[575 #FFFF67.B5 602 -128!602 -128[629 #FFFF99.53 644 -71!644 -71[659 #FFFFDA.E9 660 0!660 0[660 #24.0F 644 70!644 70[629 #65.AC 602 127!602 127[575 #97.4B 540 165!540 165[504 #B2.DA 464 180!464 180|-465 180!-465 180[-505 #B3.E9
+ -541 165!-541 165[-576 #97.4B -603 127!-603 127[-630 #65.AC -645 70!-645 70[-660 #24.0F -660 0!-660 0[-660 #FFFFDA.E9 -645 -71!-645 -71[-630 #FFFF99.53 -603 -128!-603 -128[-576 #FFFF67.B5 -541 -166!-541 -166[-505 #FFFF4C.1E -465 -180
+!-465 -180|464 -180!464 -180[504 #FFFF4C.1E 540 -166"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CC0000"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!540 -166[575 #FFFF67.B5 602 -128!602 -128[629 #FFFF99.53 644 -71!644 -71[659 #FFFFDA.E9 660 0!660 0[660 #24.0F 644 70!644 70[629 #65.AC 602 127!602 127[575 #97.4B 540 165!540 165[504 #B2.DA 464 180!464 180|-465 180!-465 180[-505 #B3.E9
+ -541 165!-541 165[-576 #97.4B -603 127!-603 127[-630 #65.AC -645 70!-645 70[-660 #24.0F -660 0!-660 0[-660 #FFFFDA.E9 -645 -71!-645 -71[-630 #FFFF99.53 -603 -128!-603 -128[-576 #FFFF67.B5 -541 -166!-541 -166[-505 #FFFF4C.1E -465 -180
+!-465 -180|464 -180!464 -180[504 #FFFF4C.1E 540 -166"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="center glow" color="#808080" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="buttons tube/tube glow" name="">
+                  <matrix>
+                    <Matrix a="1.03125" d="1.125"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <filters>
+                    <GlowFilter blurX="14" blurY="14" color="#FFFFFF" quality="3"/>
+                  </filters>
+                  <color>
+                    <Color tintMultiplier="1" tintColor="#FFFFFF"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="outer" color="#4FFF4F" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <LinearGradient>
+                        <matrix>
+                          <Matrix a="0.017120361328125" b="0.01275634765625" c="-0.0194244384765625" d="0.0252227783203125" tx="1.4" ty="0.45"/>
+                        </matrix>
+                        <GradientEntry color="#FE9292" ratio="0"/>
+                        <GradientEntry color="#FEE4E4" ratio="1"/>
+                      </LinearGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!563 -203[#25A.DF #FFFF45.53 634 -156!634 -156[#299.0A #FFFF82.B2 681.5 -86!681.5 -86[#2BB.03 #FFFFD3.16 700 0!700 0[#2BB.FC #2B.EF 681.5 85!681.5 85[#299.0A #7C.4D 634 155!634 155[#25A.DF #B9.AC 563 202!563 202[#209.35 #DB.21 476.5 220
+!476.5 220|-476.5 220!-476.5 220[#FFFDF5.CE #DC.16 -564 202!-564 202[-603.875 #B9.AC -635 155!-635 155[#FFFD65.F5 #7C.4D -682.5 85!-682.5 85[-700 #2B.EF -700 0!-700 0[-700 #FFFFD3.16 -682.5 -86!-682.5 -86[#FFFD65.F5 #FFFF82.B2 -635 -156
+!-635 -156[-603.875 #FFFF45.53 -564 -203!-564 -203[#FFFDF5.CE #FFFF23.E4 -476.5 -220!-476.5 -220|476.5 -220!476.5 -220[#209.35 #FFFF23.E4 563 -203"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFE6E6"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!563 -203[#25A.DF #FFFF45.53 634 -156!634 -156[#299.0A #FFFF82.B2 681.5 -86!681.5 -86[#2BB.03 #FFFFD3.16 700 0!700 0[#2BB.FC #2B.EF 681.5 85!681.5 85[#299.0A #7C.4D 634 155!634 155[#25A.DF #B9.AC 563 202!563 202[#209.35 #DB.21 476.5 220
+!476.5 220|-476.5 220!-476.5 220[#FFFDF5.CE #DC.16 -564 202!-564 202[-603.875 #B9.AC -635 155!-635 155[#FFFD65.F5 #7C.4D -682.5 85!-682.5 85[-700 #2B.EF -700 0!-700 0[-700 #FFFFD3.16 -682.5 -86!-682.5 -86[#FFFD65.F5 #FFFF82.B2 -635 -156
+!-635 -156[-603.875 #FFFF45.53 -564 -203!-564 -203[#FFFDF5.CE #FFFF23.E4 -476.5 -220!-476.5 -220|476.5 -220!476.5 -220[#209.35 #FFFF23.E4 563 -203"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF0000"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!563 -203[#25A.DF #FFFF45.53 634 -156!634 -156[#299.0A #FFFF82.B2 681.5 -86!681.5 -86[#2BB.03 #FFFFD3.16 700 0!700 0[#2BB.FC #2B.EF 681.5 85!681.5 85[#299.0A #7C.4D 634 155!634 155[#25A.DF #B9.AC 563 202!563 202[#209.35 #DB.21 476.5 220
+!476.5 220|-476.5 220!-476.5 220[#FFFDF5.CE #DC.16 -564 202!-564 202[-603.875 #B9.AC -635 155!-635 155[#FFFD65.F5 #7C.4D -682.5 85!-682.5 85[-700 #2B.EF -700 0!-700 0[-700 #FFFFD3.16 -682.5 -86!-682.5 -86[#FFFD65.F5 #FFFF82.B2 -635 -156
+!-635 -156[-603.875 #FFFF45.53 -564 -203!-564 -203[#FFFDF5.CE #FFFF23.E4 -476.5 -220!-476.5 -220|476.5 -220!476.5 -220[#209.35 #FFFF23.E4 563 -203"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="outer border" color="#4FFFFF" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#C10202"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!652 -170[#2AB.FF #FFFF77.4E 701 -94!701 -94[719 #FFFFCE.EA 720 0!720 0[720 #2F.D 701 92.5!701 92.5[#2AB.FF #87.71 652 169!652 169[#26B.FE #CA.93 579 220.5!579 220.5[#217.FF #EF.1E 490 240!490 240|-490 240!-490 240[#FFFDE6.FF #F0.29 -580
+ 220.5!-580 220.5[#FFFD92.FF #CA.93 -653 169!-653 169[-685 #87.71 -702 92.5!-702 92.5[-720 #2F.D -720 0!-720 0[-720 #FFFFCE.EA -702 -94!-702 -94[-685 #FFFF77.4E -653 -170!-653 -170[#FFFD92.FF #FFFF34.6C -580 -221.5!-580 -221.5[#FFFDE6.FF
+ #FFFF0F.DB -490 -240!-490 -240|490 -240!490 -240[#217.FF #FFFF0F.DB 579 -221.5!579 -221.5[#26B.FE #FFFF34.6C 652 -170"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

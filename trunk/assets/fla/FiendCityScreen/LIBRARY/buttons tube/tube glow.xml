@@ -1,0 +1,36 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="buttons tube/tube glow" itemID="427d0af6-00006631" sourceLibraryItemHRef="Symbol 3" symbolType="graphic" lastModified="1115519862">
+  <timeline>
+    <DOMTimeline name="tube glow">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix a="0.969696044921875" d="0.941162109375"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <LinearGradient>
+                        <matrix>
+                          <Matrix a="-0.003570556640625" b="-0.0101470947265625" c="0.0009765625" d="-0.000335693359375" tx="6.05" ty="0.15"/>
+                        </matrix>
+                        <GradientEntry color="#C7E0EB" ratio="0"/>
+                        <GradientEntry color="#FFFFFF" ratio="1"/>
+                      </LinearGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!644 -67[659 -35 660 0!660 0[660 34 644 66!644 66[629 96 602 120!602 120[575 143 540 156!540 156[504 169 464 170!464 170|-465 170!-465 170[-505 170 -541 156!-541 156[-576 143 -603 120!-603 120[-630 96 -645 66!-645 66[-660 34 -660 0!-660
+ 0[-660 -35 -645 -67!-645 -67[-630 -97 -603 -121!-603 -121[-576 -144 -541 -157!-541 -157[-505 -170 -465 -170!-465 -170|464 -170!464 -170[504 -170 540 -157!540 -157[575 -144 602 -121!602 -121[629 -97 644 -67"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,66 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="hintFrame" itemID="4d063b4e-0000033a" sourceLibraryItemHRef="元件 1" scaleGridLeft="-29.75" scaleGridRight="29.75" scaleGridTop="40.7" scaleGridBottom="129.25" lastModified="1292254659">
+  <timeline>
+    <DOMTimeline name="hintFrame">
+      <layers>
+        <DOMLayer name="txt" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMStaticText fontRenderingMode="bitmap" left="68.9" width="92" height="79.8" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="-115.9" ty="10.2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>进去，干掉那个勇者！拿回本来就属于你的金子。</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" size="14" bitmapSize="280" face="MicrosoftYaHei" fillColor="#333333"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg" color="#4FFF4F" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix tx="-2" ty="35"/>
+                  </matrix>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix tx="-2" ty="35"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#CCFF99"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <StippleStroke scaleMode="normal" weight="9">
+                            <fill>
+                              <SolidColor color="#FFFFFF"/>
+                            </fill>
+                          </StippleStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!1140 -680S6|1140 2679!1140 2679|-1060 2679!-1060 2679|-1060 -680!-1060 -680|1140 -680"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
