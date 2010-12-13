@@ -1,4 +1,4 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#000000" width="760" height="700" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" adjustViewAngle3D="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#000000" width="750" height="600" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" adjustViewAngle3D="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <folders>
           <DOMFolderItem name="buttons rounded stripes" itemID="4d047bc1-000002ee"/>
      </folders>
@@ -17,13 +17,13 @@
      <timelines>
           <DOMTimeline name="场景 1">
                <layers>
-                    <DOMLayer name="title" color="#9933CC" locked="true" autoNamed="false">
+                    <DOMLayer name="title" color="#9933CC" locked="true" current="true" isSelected="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
                                         <DOMStaticText fontRenderingMode="bitmap" left="-57.7" width="259.4" height="42" autoExpand="true" isSelectable="false">
                                              <matrix>
-                                                  <Matrix tx="314.6" ty="133"/>
+                                                  <Matrix tx="298.4" ty="115"/>
                                              </matrix>
                                              <textRuns>
                                                   <DOMTextRun>
@@ -48,7 +48,7 @@
                                    <elements>
                                         <DOMStaticText fontRenderingMode="bitmap" left="-166.6" width="447.5" height="98" isSelectable="false">
                                              <matrix>
-                                                  <Matrix tx="334.1" ty="223.9"/>
+                                                  <Matrix tx="317.9" ty="205.9"/>
                                              </matrix>
                                              <textRuns>
                                                   <DOMTextRun>
@@ -63,13 +63,13 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="button" color="#4FFF4F" locked="true" current="true" isSelected="true" autoNamed="false">
+                    <DOMLayer name="button" color="#4FFF4F" locked="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
                                         <DOMSymbolInstance libraryItemName="buttons rounded stripes/rounded stripes gold" name="btnStart" symbolType="button">
                                              <matrix>
-                                                  <Matrix a="1.31320190429688" d="1.15383911132813" tx="380.05" ty="569.2"/>
+                                                  <Matrix a="1.31320190429688" d="1.15383911132813" tx="375" ty="476.9"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point/>
@@ -77,7 +77,7 @@
                                         </DOMSymbolInstance>
                                         <DOMSymbolInstance libraryItemName="buttons rounded stripes/rounded stripes blue" name="btnExit" symbolType="button">
                                              <matrix>
-                                                  <Matrix a="1.31320190429688" d="1.15383911132813" tx="380.05" ty="606.65"/>
+                                                  <Matrix a="1.31320190429688" d="1.15383911132813" tx="375" ty="518.85"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point/>
@@ -91,9 +91,9 @@
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="bg" name="" blendMode="hardlight" centerPoint3DX="386" centerPoint3DY="381">
+                                        <DOMSymbolInstance libraryItemName="bg" name="" blendMode="hardlight" centerPoint3DX="377.9" centerPoint3DY="322.3">
                                              <matrix>
-                                                  <Matrix tx="386" ty="381"/>
+                                                  <Matrix d="0.809890747070313" tx="377.9" ty="322.3"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point/>
@@ -409,6 +409,7 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="82521" publishTime="1292247369"/>
           <PublishItem publishSize="82908" publishTime="1292171964"/>
           <PublishItem publishSize="82903" publishTime="1292171831"/>
           <PublishItem publishSize="76589" publishTime="1292171305"/>
