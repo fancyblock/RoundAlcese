@@ -10,7 +10,7 @@ package UI
 	 * @author	Hejiabin
 	 * @date	2010-12-12 15:14
 	 */
-	public class WelcomeScreen extends UI.BaseUIScreen 
+	public class WelcomeScreen extends BaseUIScreen 
 	{
 		//-------------------------------- static member -----------------------------------
 		
