@@ -1,5 +1,7 @@
 package UI 
 {
+	import com.pblabs.engine.PBE;
+	
 	/**
 	 * ...
 	 * @author	Hejiabin
@@ -22,10 +24,10 @@ package UI
 			super( null );
 			
 			//set the ui bgm
-			this.UI_BGM = "../assets/Sound/BGM/FiendCityBGM.mp3";		//----------- temp
+			this.UI_BGM = "../assets/Sound/BGM/BattleBGM.mp3";
 			
 			//load the ui
-			this.loadUI( "../assets/FiendCityScreen.swf" );				//----------- temp
+			this.loadUI( "../assets/GameStageScreen.swf" );
 			
 		}
 		
@@ -34,6 +36,24 @@ package UI
 		//initial the ui
 		override protected function initialUI():void
 		{
+			addChild( UI_ROOT );
+			
+			//[unfinished]
+		}
+		
+		//enter this stage
+		override protected function onEnter():void
+		{
+			PBE.levelManager.load( "../Levels/RA_Levels.xml", 1 );						//--------[temp]
+			
+			//[unfinished]
+		}
+		
+		//leave this stage
+		override protected function onLeave():void
+		{
+			PBE.levelManager.unloadCurrentLevel();
+			
 			//[unfinished]
 		}
 		

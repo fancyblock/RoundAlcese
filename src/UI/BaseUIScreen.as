@@ -48,7 +48,9 @@ package UI
 			enableControl( true );
 			
 			//play the bgm
-			if( m_uiBGM != null ) PBE.soundManager.play( m_uiBGM, RASoundEnum.ALL_UI_BGM, 0, 100 );
+			if ( m_uiBGM != null ) PBE.soundManager.play( m_uiBGM, RASoundEnum.ALL_UI_BGM, 0, 100 );
+			
+			onEnter();
 		}
 		
 		/**
@@ -131,6 +133,8 @@ package UI
 		 */
 		protected function FadeOutToScreen( nextScreen:String ):void
 		{
+			onLeave();
+			
 			enableControl( false );
 			
 			m_nextScreen = nextScreen;
@@ -139,9 +143,13 @@ package UI
 		}
 		
 		//initial the ui
-		protected function initialUI():void
-		{
-		}
+		protected function initialUI():void {}
+		
+		//enter callback
+		protected function onEnter():void {}
+		
+		//leave callback
+		protected function onLeave():void {}
 		
 		//-------------------------------- callback function --------------------------------
 		
