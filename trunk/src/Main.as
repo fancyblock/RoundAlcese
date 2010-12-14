@@ -1,13 +1,13 @@
 package 
 {
 	import com.pblabs.engine.PBE;
-	import com.pblabs.screens.SplashScreen;
+	import com.pblabs.rendering2D.ui.SceneView;
 	import flash.display.Sprite;
+	import flash.system.fscommand;
 	import RAEnums.RAScreenEnum;
 	import UI.FiendCityScreen;
 	import UI.GameStageScreen;
 	import UI.WelcomeScreen;
-	import flash.system.fscommand;
 	
 	/**
 	 * ...
@@ -28,6 +28,10 @@ package
 		 */
 		public function Main():void 
 		{
+			//regist all the components
+			//[unfinished]
+			
+			//startup the engine
 			PBE.startup( this );
 			
 			//embedded the resource
@@ -40,10 +44,18 @@ package
 			PBE.screenManager.registerScreen( RAScreenEnum.RA_WELCOME_SCREEN, new WelcomeScreen() );
 			PBE.screenManager.registerScreen( RAScreenEnum.RA_FIENDCITY_SCREEN, new FiendCityScreen() );
 			PBE.screenManager.registerScreen( RAScreenEnum.RA_GAMESTAGE_SCREEN, new GameStageScreen() );
+			//[to be continue]
+			
+			//initial the 2d scene
+			var sceneView:SceneView = new SceneView();
+			PBE.initializeScene( sceneView );
+			
+			//initial the iso scene
 			//[unfinished]
 			
 			//show start screen
 			PBE.screenManager.push( RAScreenEnum.RA_WELCOME_SCREEN );
+			
 		}
 		
 		//-------------------------------- private function --------------------------------
