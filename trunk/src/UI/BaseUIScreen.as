@@ -88,6 +88,10 @@ package UI
 			}
 		}
 		
+		/**
+		 * @desc	load the ui MovieClip
+		 * @param	uiPath
+		 */
 		protected function loadUI( uiPath:String ):void
 		{
 			//load the ui

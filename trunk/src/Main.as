@@ -5,6 +5,7 @@ package
 	import flash.display.Sprite;
 	import RAEnums.RAScreenEnum;
 	import UI.FiendCityScreen;
+	import UI.GameStageScreen;
 	import UI.WelcomeScreen;
 	import flash.system.fscommand;
 	
@@ -38,6 +39,7 @@ package
 			//regist all the ui
 			PBE.screenManager.registerScreen( RAScreenEnum.RA_WELCOME_SCREEN, new WelcomeScreen() );
 			PBE.screenManager.registerScreen( RAScreenEnum.RA_FIENDCITY_SCREEN, new FiendCityScreen() );
+			PBE.screenManager.registerScreen( RAScreenEnum.RA_GAMESTAGE_SCREEN, new GameStageScreen() );
 			//[unfinished]
 			
 			//show start screen

@@ -2,6 +2,7 @@ package UI
 {
 	import flash.display.SimpleButton;
 	import flash.events.MouseEvent;
+	import RAEnums.RAScreenEnum;
 	
 	/**
 	 * ...
@@ -65,7 +66,7 @@ package UI
 		//enter the cashbox
 		private function _onCashbox( evt:MouseEvent ):void
 		{
-			//[unfinished]
+			this.FadeOutToScreen( RAScreenEnum.RA_GAMESTAGE_SCREEN );
 		}
 		
 		//enter the item shop
@@ -83,7 +84,7 @@ package UI
 		//enter the ...
 		private function _onOhters( evt:MouseEvent ):void
 		{
-			//[unfinished]
+			this.FadeOutToScreen( RAScreenEnum.RA_WELCOME_SCREEN );
 		}
 		
 	}
