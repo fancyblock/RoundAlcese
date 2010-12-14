@@ -19,6 +19,9 @@ namespace MapEditor
 
             mMapData = new MapData();
             propertyGrid1.SelectedObject = mMapData;
+
+            //mMapData.Save("d:\\aaaaa.xml");
+            //mMapData.Load("d:\\aaaaa.xml");
         }
     }
 }
