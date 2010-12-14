@@ -11,6 +11,7 @@ package RAEnums
 		
 		static public var RA_WELCOME_SCREEN:String = "RA_WelcomeScreen";
 		static public var RA_FIENDCITY_SCREEN:String = "RA_FiendCityScreen";
+		static public var RA_GAMESTAGE_SCREEN:String = "RA_GameStageScreen";
 	}
 
 }
