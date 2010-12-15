@@ -44,6 +44,16 @@ package IsoMap
 			m_isoView.addScene( scene );
 		}
 		
+		/**
+		 * @desc	set the size of view
+		 * @param	wid
+		 * @param	hei
+		 */
+		public function SetViewSize( wid:Number, hei:Number ):void
+		{
+			m_isoView.setSize( wid, hei );
+		}
+		
 		//------------------------------ private function ----------------------------------
 		
 		//------------------------------- event callback -----------------------------------

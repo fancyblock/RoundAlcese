@@ -2,6 +2,7 @@ package IsoMap
 {
 	import as3isolib.display.scene.IIsoScene;
 	import as3isolib.display.scene.IsoScene;
+	import as3isolib.events.IsoEvent;
 	import com.pblabs.engine.entity.EntityComponent;
 	
 	/**
@@ -28,6 +29,8 @@ package IsoMap
 			
 			//instance the scene
 			m_isoScene = new IsoScene();
+			m_isoScene.addEventListener( IsoEvent.CHILD_ADDED, _onChildAdd );
+			m_isoScene.addEventListener( IsoEvent.CHILD_REMOVED, _onChildRemove );
 		}
 		
 		/**
@@ -42,7 +45,17 @@ package IsoMap
 		
 		//------------------------------- event callback -----------------------------------
 		
+		//callback when child added
+		private function _onChildAdd( evt:IsoEvent ):void
+		{
+			m_isoScene.render();
+		}
 		
+		//callback when child removed
+		private function _onChildRemove( evt:IsoEvent ):void
+		{
+			m_isoScene.render();
+		}
 	}
 
 }

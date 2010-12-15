@@ -11,6 +11,8 @@ package
 	import UI.FiendCityScreen;
 	import UI.GameStageScreen;
 	import UI.WelcomeScreen;
+	import IsoMap.IsoGridComponent;
+	import RAEnums.RASystemParameter;
 	
 	/**
 	 * ...
@@ -32,6 +34,7 @@ package
 		public function Main():void 
 		{
 			//regist all the components
+			PBE.registerType( IsoMap.IsoGridComponent );
 			//[unfinished]
 			
 			//startup the engine
@@ -47,7 +50,7 @@ package
 			PBE.screenManager.registerScreen( RAScreenEnum.RA_WELCOME_SCREEN, new WelcomeScreen() );
 			PBE.screenManager.registerScreen( RAScreenEnum.RA_FIENDCITY_SCREEN, new FiendCityScreen() );
 			PBE.screenManager.registerScreen( RAScreenEnum.RA_GAMESTAGE_SCREEN, new GameStageScreen() );
-			//[to be continue]
+			//[unfinished]
 			
 			//initial the 2d scene
 			var sceneView:SceneView = new SceneView();
@@ -56,11 +59,15 @@ package
 			//initial the iso scene
 			var isoMapEntity:IEntity = PBE.allocateEntity();
 			var isoView:IsoViewComponent = new IsoViewComponent();
+			isoView.SetViewSize( RASystemParameter.SCREEN_WIDTH, RASystemParameter.SCREEN_HEIGHT );
 			isoMapEntity.addComponent( isoView, "IsoView" );
 			var isoScene:IsoSceneComponent = new IsoSceneComponent();
 			isoView.AddScene( isoScene.ISCENE );
 			isoMapEntity.addComponent( isoScene, "IsoScene" );
 			isoMapEntity.initialize( "IsoMap" );
+			
+			//load the level info
+			PBE.levelManager.load( "../Levels/RA_Levels.xml" );	
 			
 			//show start screen
 			PBE.screenManager.push( RAScreenEnum.RA_WELCOME_SCREEN );

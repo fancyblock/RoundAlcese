@@ -1,5 +1,9 @@
 <levelDescriptions>
 	<level index = "1" >
+		<group name = "RA_LvTest" />
+		<file filename = "../Levels/RA_LvTest.pbelevel"/>
+	</level>
+	<level index = "2" >
 		<group name = "RA_Level1" />
 		<file filename = "../Levels/RA_Lv1.pbelevel"/>
 	</level>
