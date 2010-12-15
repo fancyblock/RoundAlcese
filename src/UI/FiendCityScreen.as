@@ -67,6 +67,7 @@ package UI
 		private function _onCashbox( evt:MouseEvent ):void
 		{
 			this.FadeOutToScreen( RAScreenEnum.RA_GAMESTAGE_SCREEN );
+			//this.GotoScreen( RAScreenEnum.RA_GAMESTAGE_SCREEN );
 		}
 		
 		//enter the item shop

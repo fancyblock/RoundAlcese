@@ -142,6 +142,21 @@ package UI
 			Tweener.addTween( this, { alpha:0, time:RASystemParameter.SCREEN_FADEOUT_TIME, transition:"linear", onComplete:_onDisappear } );
 		}
 		
+		/**
+		 * @desc	switch to next screen
+		 * @param	nextScreen
+		 */
+		protected function GotoScreen( nextScreen:String ):void
+		{
+			onLeave();
+			
+			enableControl( false );
+			
+			m_nextScreen = nextScreen;
+			
+			_onDisappear();
+		}
+		
 		//initial the ui
 		protected function initialUI():void {}
 		
