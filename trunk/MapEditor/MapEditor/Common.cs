@@ -77,9 +77,15 @@ namespace MapEditor
             mapIndex = 0;
             mapName = "unDefine";
             mapDesc = "unDefine";
-            mapSize = new Point(10, 10);
             origin = new Point(0, 0);
             mapBackground = "";
+            resize(10, 10);
+        }
+
+        public void resize(int width, int height)
+        {
+            Size = new Point(width, height);
+
             objectList = new ObjectData[mapSize.X, mapSize.Y];
             for (int x = 0; x < Size.X; x++)
             {
@@ -92,7 +98,42 @@ namespace MapEditor
 
         public bool Load(string path)
         {
-            return false;
+            if (!System.IO.File.Exists(path))
+                return false;
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load(path);
+
+            XmlElement rootElem = doc.SelectSingleNode("MapData") as XmlElement;
+            Index = int.Parse(rootElem.GetAttribute("index"));
+            Name = rootElem.GetAttribute("name");
+            Desc = rootElem.GetAttribute("describe");
+
+            XmlElement elem = rootElem.SelectSingleNode("Origin") as XmlElement;
+            Origin = new Point(int.Parse(elem.GetAttribute("x")), int.Parse(elem.GetAttribute("y")));
+
+            elem = rootElem.SelectSingleNode("Background") as XmlElement;
+            Background = elem.GetAttribute("picture");
+
+            elem = rootElem.SelectSingleNode("Objects") as XmlElement;
+            Point size = new Point(int.Parse(elem.GetAttribute("width")), int.Parse(elem.GetAttribute("height")));
+
+            resize(size.X, size.Y);
+
+            foreach (XmlNode node in elem.SelectNodes("Object"))
+            {
+                XmlElement subElem = node as XmlElement;
+                int x = int.Parse(subElem.GetAttribute("x"));
+                int y = int.Parse(subElem.GetAttribute("y"));
+                int offx = int.Parse(subElem.GetAttribute("offsetx"));
+                int offy = int.Parse(subElem.GetAttribute("offsety"));
+                string picture = subElem.GetAttribute("picture");
+
+                objectList[x, y].Offset = new Point(offx, offy);
+                objectList[x, y].Picture = picture;
+            }
+
+            return true;
         }
 
         public bool Save(string path)
