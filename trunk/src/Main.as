@@ -1,9 +1,12 @@
 package 
 {
+	import com.pblabs.engine.entity.IEntity;
 	import com.pblabs.engine.PBE;
 	import com.pblabs.rendering2D.ui.SceneView;
 	import flash.display.Sprite;
 	import flash.system.fscommand;
+	import IsoMap.IsoSceneComponent;
+	import IsoMap.IsoViewComponent;
 	import RAEnums.RAScreenEnum;
 	import UI.FiendCityScreen;
 	import UI.GameStageScreen;
@@ -51,7 +54,13 @@ package
 			PBE.initializeScene( sceneView );
 			
 			//initial the iso scene
-			//[unfinished]
+			var isoMapEntity:IEntity = PBE.allocateEntity();
+			var isoView:IsoViewComponent = new IsoViewComponent();
+			isoMapEntity.addComponent( isoView, "IsoView" );
+			var isoScene:IsoSceneComponent = new IsoSceneComponent();
+			isoView.AddScene( isoScene.ISCENE );
+			isoMapEntity.addComponent( isoScene, "IsoScene" );
+			isoMapEntity.initialize( "IsoMap" );
 			
 			//show start screen
 			PBE.screenManager.push( RAScreenEnum.RA_WELCOME_SCREEN );
