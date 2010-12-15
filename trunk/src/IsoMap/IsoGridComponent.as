@@ -2,7 +2,6 @@ package IsoMap
 {
 	import as3isolib.display.IsoSprite;
 	import as3isolib.display.scene.IIsoScene;
-	import as3isolib.display.scene.IsoGrid;
 	import com.pblabs.engine.entity.EntityComponent;
 	import com.pblabs.engine.PBE;
 	import com.pblabs.engine.resource.SWFResource;
