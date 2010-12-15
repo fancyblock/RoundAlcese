@@ -7,7 +7,10 @@ package RAEnums
 	 */
 	public class RASystemParameter 
 	{
-		static public var SCREEN_FADEOUT_TIME:Number = 2;
+		static public var SCREEN_FADEOUT_TIME:Number = 1;
+		
+		static public var SCREEN_WIDTH:int = 750;
+		static public var SCREEN_HEIGHT:int = 600;
 	}
 
 }

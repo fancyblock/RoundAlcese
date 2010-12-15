@@ -1,47 +1,20 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#000000" width="750" height="600" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" adjustViewAngle3D="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
-     <folders>
-          <DOMFolderItem name="buttons tube double" itemID="4d08e024-0000031c"/>
-     </folders>
-     <media>
-          <DOMBitmapItem name="alcese" itemID="4d07736e-000001e0" sourceExternalFilepath=".\LIBRARY\actor_bg.png" sourceLastImported="1292427245" externalFileSize="9528" originalCompressionType="lossless" quality="50" href="alcese.png" bitmapDataHRef="M 1 1292333816.dat" frameRight="4960" frameBottom="1460"/>
-          <DOMBitmapItem name="evil" itemID="4d077373-000001e1" sourceExternalFilepath=".\LIBRARY\monster_bg.png" sourceLastImported="1292427245" externalFileSize="11391" originalCompressionType="lossless" quality="50" href="evil.png" bitmapDataHRef="M 2 1292333835.dat" frameRight="5140" frameBottom="1540"/>
-     </media>
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#000000" width="750" height="600" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridVisible="true" viewAngle3D="70.7391536835427" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+     <media/>
      <symbols>
-          <Include href="buttons tube double/tube double blue.xml" itemIcon="0" loadImmediate="false"/>
+          <Include href="grid.xml" loadImmediate="false"/>
      </symbols>
      <timelines>
           <DOMTimeline name="场景 1">
                <layers>
-                    <DOMLayer name="btn" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+                    <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="buttons tube double/tube double blue" name="mcReturn" selected="true" symbolType="button">
-                                             <matrix>
-                                                  <Matrix tx="700.95" ty="25"/>
-                                             </matrix>
+                                        <DOMSymbolInstance libraryItemName="grid" name="mcGrid">
                                              <transformationPoint>
                                                   <Point/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                   </elements>
-                              </DOMFrame>
-                         </frames>
-                    </DOMLayer>
-                    <DOMLayer name="图层 1" color="#4FFF4F" locked="true">
-                         <frames>
-                              <DOMFrame index="0" keyMode="9728">
-                                   <elements>
-                                        <DOMBitmapInstance name="" referenceID="" libraryItemName="alcese">
-                                             <matrix>
-                                                  <Matrix tx="2" ty="2"/>
-                                             </matrix>
-                                        </DOMBitmapInstance>
-                                        <DOMBitmapInstance name="" referenceID="" libraryItemName="evil">
-                                             <matrix>
-                                                  <Matrix tx="488" ty="518.95"/>
-                                             </matrix>
-                                        </DOMBitmapInstance>
                                    </elements>
                               </DOMFrame>
                          </frames>
@@ -352,8 +325,8 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="11537" publishTime="1292333846"/>
-          <PublishItem publishSize="530" publishTime="1292333731"/>
-          <PublishItem publishSize="530" publishTime="1292333698"/>
+          <PublishItem publishSize="6743" publishTime="1292429533"/>
+          <PublishItem publishSize="4363" publishTime="1292428659"/>
+          <PublishItem publishSize="4355" publishTime="1292426856"/>
      </publishHistory>
 </DOMDocument>

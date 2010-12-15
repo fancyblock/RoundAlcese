@@ -1,0 +1,14 @@
+<things version="1">
+
+	<entity name = "MapGrid">
+		<component type = "IsoMap.IsoGridComponent" name = "Grid">
+			<PARENT_SCENE componentReference = "IsoMap" componentName = "IsoScene"/>
+			<GRID_BG>../assets/MapGridTestLevel.swf</GRID_BG>
+		</component>
+	</entity>
+
+  	<group name="RA_LvTest">
+		<objectReference name = "MapGrid"/>	
+  	</group>
+  
+</things>
