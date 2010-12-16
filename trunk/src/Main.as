@@ -8,6 +8,7 @@ package
 	import IsoMap.IsoGridComponent;
 	import IsoMap.IsoSceneComponent;
 	import IsoMap.IsoViewComponent;
+	import IsoMap.IsoCameraComponent;
 	import RAEnums.RAScreenEnum;
 	import RAEnums.RASystemParameter;
 	import UI.FiendCityScreen;
@@ -35,6 +36,7 @@ package
 		{
 			//regist all the components
 			PBE.registerType( IsoMap.IsoGridComponent );
+			PBE.registerType( IsoMap.IsoCameraComponent );
 			//[unfinished]
 			
 			//startup the engine
