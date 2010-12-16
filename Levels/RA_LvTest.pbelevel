@@ -1,14 +1,31 @@
 <things version="1">
 
+	<!-- Map grid of this level, indcate the map size and the grid background -->
 	<entity name = "MapGrid">
 		<component type = "IsoMap.IsoGridComponent" name = "Grid">
 			<PARENT_SCENE componentReference = "IsoMap" componentName = "IsoScene"/>
-			<GRID_BG>../assets/MapGridTestLevel.swf</GRID_BG>
+			<!--	<GRID_BG>../assets/MapGridTestLevel.swf</GRID_BG>	-->
+			<!--	<USE_DEFAULT_GRID>false</USE_DEFAULT_GRID>	-->
+			<GRID_SIZE type = "">
+				<x>18</x>
+				<y>18</y>
+			</GRID_SIZE>
+			<CELL_SIZE>20</CELL_SIZE>
+		</component>
+	</entity>
+
+	<!-- Map camera of this level, ... -->
+	<entity name = "MapCamera">
+		<component type = "IsoMap.IsoCameraComponent" name = "Camera">
+			<ISO_VIEW componentReference = "IsoMap" componentName = "IsoView"/>
+			<ISO_GRID componentReference = "MapGrid" componentName = "Grid"/>
+			<MOVE_VELOCITY>30</MOVE_VELOCITY>
 		</component>
 	</entity>
 
   	<group name="RA_LvTest">
-		<objectReference name = "MapGrid"/>	
+		<objectReference name = "MapGrid"/>
+		<objectReference name = "MapCamera"/>	
   	</group>
   
 </things>

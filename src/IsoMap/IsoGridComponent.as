@@ -2,6 +2,7 @@ package IsoMap
 {
 	import as3isolib.display.IsoSprite;
 	import as3isolib.display.scene.IIsoScene;
+	import as3isolib.display.scene.IsoGrid;
 	import com.pblabs.engine.entity.EntityComponent;
 	import com.pblabs.engine.PBE;
 	import com.pblabs.engine.resource.SWFResource;
@@ -21,11 +22,13 @@ package IsoMap
 		
 		private var m_isoScene:IIsoScene = null;
 		
+		private var m_isDefaultGrid:Boolean = true;
+		private var m_defaultIsoGrid:IsoGrid = null;
 		private var m_isoGrid:IsoSprite = null;
 		private var m_mcGrid:MovieClip = null;
 		
 		private var m_gridSize:Point = new Point();
-		private var m_size:Point = new Point();
+		private var m_cellSize:Number = 0;
 		
 		//-------------------------------- public function ----------------------------------
 		
@@ -51,6 +54,17 @@ package IsoMap
 		}
 		
 		/**
+		 * @desc	set if use the default grid
+		 */
+		public function set USE_DEFAULT_GRID( value:Boolean ):void
+		{
+			if ( this.isRegistered == false )
+			{
+				m_isDefaultGrid = value;
+			}
+		}
+		
+		/**
 		 * @desc	set the grid pic path
 		 */
 		public function set GRID_BG( picPath:String ):void
@@ -67,19 +81,44 @@ package IsoMap
 		/**
 		 * @desc	getter and setter of the size
 		 */
-		public function get SIZE():Point { return m_size; }
-		public function set SIZE( size:Point ):void { m_size = size; }
+		public function get CELL_SIZE():Number { return m_cellSize; }
+		public function set CELL_SIZE( size:Number ):void { m_cellSize = size; }
 		
 		//-------------------------------- private function ---------------------------------
 		
+		//callback when grid add to the scene
 		override protected function onAdd () : void
 		{
-			m_isoScene.addChild( m_isoGrid );
+			super.onAdd();
+			
+			if ( m_isDefaultGrid == true )
+			{
+				m_defaultIsoGrid = new IsoGrid();
+				m_defaultIsoGrid.showOrigin = false;
+				m_defaultIsoGrid.setGridSize( m_gridSize.x, m_gridSize.y );
+				m_defaultIsoGrid.cellSize = m_cellSize;
+				
+				m_isoScene.addChild( m_defaultIsoGrid );
+			}
+			else
+			{
+				m_isoScene.addChild( m_isoGrid );
+			}
 		}
 
+		//callback when grid remove from the scene
 		override protected function onRemove () : void
 		{
-			m_isoScene.removeChild( m_isoGrid );
+			super.onRemove();
+			
+			if ( m_isDefaultGrid == true )
+			{
+				m_isoScene.removeChild( m_defaultIsoGrid );
+			}
+			else
+			{
+				m_isoScene.removeChild( m_isoGrid );
+			}
 		}
 		
 		//-------------------------------- callback function --------------------------------
