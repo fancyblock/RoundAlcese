@@ -12,6 +12,7 @@ namespace MapEditor
     {
         private Point offset;   // 偏移
         private string picture; // 图片
+        private bool passable;  // 通行
 
         public string Picture
         {
@@ -23,11 +24,17 @@ namespace MapEditor
             set { offset = value; }
             get { return offset; }
         }
+        public bool Passable
+        {
+            set { passable = value; }
+            get { return passable; }
+        }
 
         public ObjectData()
         {
             offset = new Point(0, 0);
             picture = "";
+            passable = true;
         }
     }
 
@@ -128,9 +135,11 @@ namespace MapEditor
                 int offx = int.Parse(subElem.GetAttribute("offsetx"));
                 int offy = int.Parse(subElem.GetAttribute("offsety"));
                 string picture = subElem.GetAttribute("picture");
+                bool passable = bool.Parse(subElem.GetAttribute("passable"));
 
                 objectList[x, y].Offset = new Point(offx, offy);
                 objectList[x, y].Picture = picture;
+                objectList[x, y].Passable = passable;
             }
 
             return true;
@@ -175,6 +184,7 @@ namespace MapEditor
                     elem.SetAttribute("offsetx", objectList[x, y].Offset.X.ToString());
                     elem.SetAttribute("offsety", objectList[x, y].Offset.Y.ToString());
                     elem.SetAttribute("picture", objectList[x, y].Picture);
+                    elem.SetAttribute("passable", objectList[x, y].Passable.ToString());
                     baseNode.AppendChild(elem);
                 }
             }
