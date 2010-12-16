@@ -23,6 +23,7 @@
 		</component>
 	</entity>
 
+	<!-- organize the entity as a group -->
   	<group name="RA_LvTest">
 		<objectReference name = "MapGrid"/>
 		<objectReference name = "MapCamera"/>	
