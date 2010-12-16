@@ -4,11 +4,16 @@
 	<entity name = "MapGrid">
 		<component type = "IsoMap.IsoGridComponent" name = "Grid">
 			<PARENT_SCENE componentReference = "IsoMap" componentName = "IsoScene"/>
-			<!--	<GRID_BG>../assets/MapGridTestLevel.swf</GRID_BG>	-->
-			<!--	<USE_DEFAULT_GRID>false</USE_DEFAULT_GRID>	-->
+			<!--	<GRID_BG>../assets/MapGridTestLevel.png</GRID_BG>	
+			<USE_DEFAULT_GRID>false</USE_DEFAULT_GRID>
+			<IS_SWF_BG>false</IS_SWF_BG>
+			<BG_OFFSET type = "">
+				<x>-321</x>
+				<y>0</y>
+			</BG_OFFSET>	-->
 			<GRID_SIZE type = "">
-				<x>18</x>
-				<y>18</y>
+				<x>17</x>
+				<y>17</y>
 			</GRID_SIZE>
 			<CELL_SIZE>20</CELL_SIZE>
 		</component>
