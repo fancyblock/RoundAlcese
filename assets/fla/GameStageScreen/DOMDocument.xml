@@ -16,9 +16,9 @@
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="buttons tube double/tube double blue" name="mcReturn" selected="true" symbolType="button">
+                                        <DOMSymbolInstance libraryItemName="buttons tube double/tube double blue" name="mcReturn" symbolType="button">
                                              <matrix>
-                                                  <Matrix tx="700.95" ty="25"/>
+                                                  <Matrix tx="41" ty="580.95"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point/>

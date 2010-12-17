@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="buttons tube double/tube double blue" itemID="427e0825-00002584" sourceLibraryItemHRef="Symbol 3" symbolType="button" lastModified="1292427321">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="buttons tube double/tube double blue" itemID="427e0825-00002584" sourceLibraryItemHRef="Symbol 3" symbolType="button" lastModified="1292600660">
   <timeline>
     <DOMTimeline name="tube double blue">
       <layers>
@@ -12,7 +12,7 @@
                   </matrix>
                   <textRuns>
                     <DOMTextRun>
-                      <characters>返回</characters>
+                      <characters>退出</characters>
                       <textAttrs>
                         <DOMTextAttrs alignment="center" size="10" bitmapSize="200" face="MicrosoftYaHei" fillColor="#333333"/>
                       </textAttrs>
