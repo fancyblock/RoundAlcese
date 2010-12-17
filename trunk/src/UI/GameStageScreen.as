@@ -1,10 +1,10 @@
 package UI 
 {
-	import com.pblabs.engine.entity.IEntity;
+	import com.pblabs.engine.core.LevelEvent;
 	import com.pblabs.engine.PBE;
 	import flash.display.SimpleButton;
-	import IsoMap.IsoGridComponent;
 	import flash.events.MouseEvent;
+	import IsoMap.IsoSceneComponent;
 	import RAEnums.RAScreenEnum;
 	
 	/**
@@ -35,6 +35,9 @@ package UI
 			
 			//load the ui
 			this.loadUI( "../assets/GameStageScreen.swf" );
+			
+			//add event listener
+			PBE.levelManager.addEventListener( LevelEvent.LEVEL_LOADED_EVENT, _onLevelLoaded );
 			
 		}
 		
@@ -78,6 +81,14 @@ package UI
 		private function _onReturn( evt:MouseEvent ):void
 		{
 			FadeOutToScreen( RAScreenEnum.RA_FIENDCITY_SCREEN );
+		}
+		
+		//callback when level load finished
+		private function _onLevelLoaded( evt:LevelEvent ):void
+		{
+			var scene:IsoSceneComponent = PBE.lookupEntity( "IsoMap" ).lookupComponentByName( "IsoScene" ) as IsoSceneComponent;
+			
+			scene.Render();
 		}
 		
 	}

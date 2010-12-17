@@ -4,18 +4,18 @@
 	<entity name = "MapGrid">
 		<component type = "IsoMap.IsoGridComponent" name = "Grid">
 			<PARENT_SCENE componentReference = "IsoMap" componentName = "IsoScene"/>
-			<USE_DEFAULT_GRID>true</USE_DEFAULT_GRID>
+			<USE_DEFAULT_GRID>false</USE_DEFAULT_GRID>
 			<ITEM_ASSETS>../assets/MapGridTestLevel.png</ITEM_ASSETS>
 			<IS_SWF_ASSETS>false</IS_SWF_ASSETS>
 			<ASSETS_OFFSET type = "">
-				<x>-321</x>
-				<y>0</y>
+				<x>-375</x>
+				<y>-118.5</y>
 			</ASSETS_OFFSET>
 			<GRID_SIZE type = "">
 				<x>10</x>
 				<y>10</y>
 			</GRID_SIZE>
-			<CELL_SIZE>38</CELL_SIZE>
+			<CELL_SIZE>36</CELL_SIZE>
 		</component>
 	</entity>
 
@@ -28,9 +28,9 @@
 		</component>
 	</entity>
 
-	<!-- put a test item to the map -->
-	<entity name = "testItem1">
-		<component type = "IsoMap.IsoMapItem.IsoMapItem" name = "item1">
+	<!-- put a group of items on the map -->
+	<entity name = "Decorations">
+		<component type = "IsoMap.IsoMapItem.IsoMapItem" name = "Deco1">
 			<GRID_MAP componentReference = "MapGrid" componentName = "Grid"/>
 			<ITEM_ASSETS>../assets/testItem1.png</ITEM_ASSETS>
 			<IS_SWF_ASSETS>false</IS_SWF_ASSETS>
@@ -47,13 +47,64 @@
 				<y>1</y>
 			</SIZE>
 		</component>
+		<component type = "IsoMap.IsoMapItem.IsoMapItem" name = "Deco2">
+			<GRID_MAP componentReference = "MapGrid" componentName = "Grid"/>
+			<ITEM_ASSETS>../assets/testItem2.png</ITEM_ASSETS>
+			<IS_SWF_ASSETS>false</IS_SWF_ASSETS>
+			<ASSETS_OFFSET type = "">
+				<x>-44</x>
+				<y>-32</y>
+			</ASSETS_OFFSET>
+			<POSITION type = "">
+				<x>1</x>
+				<y>0</y>
+			</POSITION>
+			<SIZE type = "">
+				<x>1</x>
+				<y>1</y>
+			</SIZE>
+		</component>
+		<component type = "IsoMap.IsoMapItem.IsoMapItem" name = "Deco3">
+			<GRID_MAP componentReference = "MapGrid" componentName = "Grid"/>
+			<ITEM_ASSETS>../assets/testItem3.png</ITEM_ASSETS>
+			<IS_SWF_ASSETS>false</IS_SWF_ASSETS>
+			<ASSETS_OFFSET type = "">
+				<x>-43</x>
+				<y>-46</y>
+			</ASSETS_OFFSET>
+			<POSITION type = "">
+				<x>2</x>
+				<y>1</y>
+			</POSITION>
+			<SIZE type = "">
+				<x>1</x>
+				<y>1</y>
+			</SIZE>
+		</component>
+		<component type = "IsoMap.IsoMapItem.IsoMapItem" name = "Deco4">
+			<GRID_MAP componentReference = "MapGrid" componentName = "Grid"/>
+			<ITEM_ASSETS>../assets/testItem4.png</ITEM_ASSETS>
+			<IS_SWF_ASSETS>false</IS_SWF_ASSETS>
+			<ASSETS_OFFSET type = "">
+				<x>-44</x>
+				<y>-34</y>
+			</ASSETS_OFFSET>
+			<POSITION type = "">
+				<x>5</x>
+				<y>2</y>
+			</POSITION>
+			<SIZE type = "">
+				<x>1</x>
+				<y>1</y>
+			</SIZE>
+		</component>
 	</entity>
 
 	<!-- organize the entity as a group -->
   	<group name="RA_LvTest">
 		<objectReference name = "MapGrid"/>
 		<objectReference name = "MapCamera"/>
-		<objectReference name = "testItem1"/>
+		<objectReference name = "Decorations"/>
 	</group>
   
 </things>

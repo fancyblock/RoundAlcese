@@ -41,6 +41,15 @@ package IsoMap
 			return m_isoScene;
 		}
 		
+		/**
+		 * @desc	render the scene
+		 * @param	recursive
+		 */
+		public function Render( recursive:Boolean = true ):void
+		{
+			m_isoScene.render( recursive );
+		}
+		
 		//------------------------------ private function ----------------------------------
 		
 		//------------------------------- event callback -----------------------------------
@@ -48,13 +57,13 @@ package IsoMap
 		//callback when child added
 		private function _onChildAdd( evt:IsoEvent ):void
 		{
-			m_isoScene.render();
+			//[unfinished]
 		}
 		
 		//callback when child removed
 		private function _onChildRemove( evt:IsoEvent ):void
 		{
-			m_isoScene.render();
+			//[unfinished]
 		}
 	}
 
