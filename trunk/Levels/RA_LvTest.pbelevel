@@ -4,18 +4,18 @@
 	<entity name = "MapGrid">
 		<component type = "IsoMap.IsoGridComponent" name = "Grid">
 			<PARENT_SCENE componentReference = "IsoMap" componentName = "IsoScene"/>
-			<!--	<GRID_BG>../assets/MapGridTestLevel.png</GRID_BG>	
-			<USE_DEFAULT_GRID>false</USE_DEFAULT_GRID>
-			<IS_SWF_BG>false</IS_SWF_BG>
-			<BG_OFFSET type = "">
+			<USE_DEFAULT_GRID>true</USE_DEFAULT_GRID>
+			<ITEM_ASSETS>../assets/MapGridTestLevel.png</ITEM_ASSETS>
+			<IS_SWF_ASSETS>false</IS_SWF_ASSETS>
+			<ASSETS_OFFSET type = "">
 				<x>-321</x>
 				<y>0</y>
-			</BG_OFFSET>	-->
+			</ASSETS_OFFSET>
 			<GRID_SIZE type = "">
-				<x>17</x>
-				<y>17</y>
+				<x>10</x>
+				<y>10</y>
 			</GRID_SIZE>
-			<CELL_SIZE>20</CELL_SIZE>
+			<CELL_SIZE>38</CELL_SIZE>
 		</component>
 	</entity>
 
@@ -28,10 +28,32 @@
 		</component>
 	</entity>
 
+	<!-- put a test item to the map -->
+	<entity name = "testItem1">
+		<component type = "IsoMap.IsoMapItem.IsoMapItem" name = "item1">
+			<GRID_MAP componentReference = "MapGrid" componentName = "Grid"/>
+			<ITEM_ASSETS>../assets/testItem1.png</ITEM_ASSETS>
+			<IS_SWF_ASSETS>false</IS_SWF_ASSETS>
+			<ASSETS_OFFSET type = "">
+				<x>-43</x>
+				<y>-34</y>
+			</ASSETS_OFFSET>
+			<POSITION type = "">
+				<x>0</x>
+				<y>0</y>
+			</POSITION>
+			<SIZE type = "">
+				<x>1</x>
+				<y>1</y>
+			</SIZE>
+		</component>
+	</entity>
+
 	<!-- organize the entity as a group -->
   	<group name="RA_LvTest">
 		<objectReference name = "MapGrid"/>
-		<objectReference name = "MapCamera"/>	
-  	</group>
+		<objectReference name = "MapCamera"/>
+		<objectReference name = "testItem1"/>
+	</group>
   
 </things>

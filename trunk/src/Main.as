@@ -5,10 +5,11 @@ package
 	import com.pblabs.rendering2D.ui.SceneView;
 	import flash.display.Sprite;
 	import flash.system.fscommand;
+	import IsoMap.IsoCameraComponent;
 	import IsoMap.IsoGridComponent;
+	import IsoMap.IsoMapItem.IsoMapItem;
 	import IsoMap.IsoSceneComponent;
 	import IsoMap.IsoViewComponent;
-	import IsoMap.IsoCameraComponent;
 	import RAEnums.RAScreenEnum;
 	import RAEnums.RASystemParameter;
 	import UI.FiendCityScreen;
@@ -35,8 +36,9 @@ package
 		public function Main():void 
 		{
 			//regist all the components
-			PBE.registerType( IsoMap.IsoGridComponent );
-			PBE.registerType( IsoMap.IsoCameraComponent );
+			PBE.registerType( IsoGridComponent );
+			PBE.registerType( IsoCameraComponent );
+			PBE.registerType( IsoMapItem );
 			//[unfinished]
 			
 			//startup the engine
