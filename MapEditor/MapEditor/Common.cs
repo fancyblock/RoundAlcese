@@ -43,10 +43,12 @@ namespace MapEditor
         private int mapIndex;   // 索引
         private string mapName; // 名称
         private string mapDesc; // 描述
-        private Point mapSize;  // 尺寸
+        private Size mapSize;   // 尺寸
         private Point origin;   // 原点坐标
-        private string mapBackground; // 背景图
-        private ObjectData[,] objectList = null; // Obj列表
+        private string mapBackground;               // 背景图
+        private ObjectData[,] objectList = null;    // Obj列表
+
+        private Size pixelSize; // box的实际大小
 
         public int Index
         {
@@ -63,9 +65,17 @@ namespace MapEditor
             set { mapDesc = value; }
             get { return mapDesc; }
         }
-        public Point Size
+        public Size Size
         {
-            set { mapSize = value; }
+            set
+            {
+                Size size = value;
+                if (size.Width != mapSize.Width || size.Height != mapSize.Height)
+                {
+                    mapSize = size;
+                    resize(mapSize.Width, mapSize.Height);
+                }
+            }
             get { return mapSize; }
         }
         public Point Origin
@@ -78,6 +88,11 @@ namespace MapEditor
             set { mapBackground = value; }
             get { return mapBackground; }
         }
+        public Size PixelSize
+        {
+            set { pixelSize = value; }
+            get { return pixelSize; }
+        }
 
         public MapData()
         { 
@@ -87,16 +102,17 @@ namespace MapEditor
             origin = new Point(0, 0);
             mapBackground = "";
             resize(10, 10);
+            pixelSize = new Size(512, 512);
         }
 
         public void resize(int width, int height)
         {
-            Size = new Point(width, height);
+            Size = new Size(width, height);
 
-            objectList = new ObjectData[mapSize.X, mapSize.Y];
-            for (int x = 0; x < Size.X; x++)
+            objectList = new ObjectData[mapSize.Width, mapSize.Height];
+            for (int x = 0; x < Size.Width; x++)
             {
-                for (int y = 0; y < Size.Y; y++)
+                for (int y = 0; y < Size.Height; y++)
                 {
                     objectList[x, y] = new ObjectData();
                 }
@@ -168,15 +184,15 @@ namespace MapEditor
             baseNode.AppendChild(elem);
 
             elem = doc.CreateElement("Objects");
-            elem.SetAttribute("width", Size.X.ToString());
-            elem.SetAttribute("height", Size.Y.ToString());
+            elem.SetAttribute("width", Size.Width.ToString());
+            elem.SetAttribute("height", Size.Height.ToString());
             baseNode.AppendChild(elem);
 
             baseNode = baseNode.SelectSingleNode("Objects");
 
-            for (int x = 0; x < Size.X; x++)
+            for (int x = 0; x < Size.Width; x++)
             {
-                for (int y = 0; y < Size.Y; y++)
+                for (int y = 0; y < Size.Height; y++)
                 {
                     elem = doc.CreateElement("Object");
                     elem.SetAttribute("x", x.ToString());
