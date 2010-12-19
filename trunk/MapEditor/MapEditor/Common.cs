@@ -5,15 +5,35 @@ using System.Text;
 using System.Drawing;
 using System.Collections;
 using System.Xml;
+using System.ComponentModel;
 
 namespace MapEditor
 {
+    public class MapResConverter : StringConverter
+    {
+        public override bool GetStandardValuesSupported(ITypeDescriptorContext context)
+        {
+            return true;
+        }
+
+        public override StandardValuesCollection GetStandardValues(ITypeDescriptorContext context)
+        {
+            System.Collections.ArrayList list = new System.Collections.ArrayList();
+            list.Add("");
+            foreach (string str in System.IO.Directory.GetFiles(System.Windows.Forms.Application.StartupPath + "\\..\\assets\\Maps\\", "*.png"))
+                list.Add(System.IO.Path.GetFileName(str));
+            return new StandardValuesCollection(list);
+        }
+    }
+
     public class ObjectData
     {
         private Point offset;   // 偏移
         private string picture; // 图片
         private bool passable;  // 通行
+        private Size volume;    // 体积
 
+        [TypeConverter(typeof(MapResConverter))]
         public string Picture
         {
             set { picture = value; }
@@ -29,12 +49,18 @@ namespace MapEditor
             set { passable = value; }
             get { return passable; }
         }
+        public Size Volume
+        {
+            set { volume = value; }
+            get { return volume; }
+        }
 
         public ObjectData()
         {
             offset = new Point(0, 0);
             picture = "";
             passable = true;
+            Volume = new Size(1, 1);
         }
     }
 
@@ -44,8 +70,9 @@ namespace MapEditor
         private string mapName; // 名称
         private string mapDesc; // 描述
         private Size mapSize;   // 尺寸
-        private Point origin;   // 原点坐标
+        private Point origin;   // 背景图原点坐标
         private string mapBackground;               // 背景图
+        private Point regionOrigin;                 // （0，0）格的坐标
         private ObjectData[,] objectList = null;    // Obj列表
 
         private Size pixelSize; // box的实际大小
@@ -83,10 +110,16 @@ namespace MapEditor
             set { origin = value; }
             get { return origin; }
         }
+        [TypeConverter(typeof(MapResConverter))]
         public string Background
         {
             set { mapBackground = value; }
             get { return mapBackground; }
+        }
+        public Point RegionOrigin
+        {
+            set { regionOrigin = value; }
+            get { return regionOrigin; }
         }
         public Size PixelSize
         {
@@ -102,7 +135,13 @@ namespace MapEditor
             origin = new Point(0, 0);
             mapBackground = "";
             resize(10, 10);
-            pixelSize = new Size(512, 512);
+            RegionOrigin = new Point(100, 200);
+            pixelSize = new Size(1024, 512);
+        }
+
+        public ObjectData getObjectData(int x, int y)
+        {
+            return objectList[x, y];
         }
 
         public void resize(int width, int height)
