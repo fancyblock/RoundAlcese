@@ -109,7 +109,7 @@ package IsoMap
 				
 				for ( var j:int = 0; j < size.y; j++ )
 				{
-					m_mapData[i][j] = false;
+					m_mapData[i][j] = 0;
 				}
 			}
 			
@@ -128,11 +128,15 @@ package IsoMap
 		 */
 		public function AddItem( item:IIsoMapItem ):Boolean
 		{
-			if ( isPlaceable( item.POSITION, item.SIZE ) == true )
+			var mapId:int = getAvailableID();
+				
+			if ( isPlaceable( item.POSITION, item.SIZE, mapId ) == true )
 			{
 				m_isoScene.addChild( item.INODE );
+				item.INODE.setSize( m_cellSize, m_cellSize, m_cellSize );
 				item.INODE.moveTo( item.POSITION.x * m_cellSize, item.POSITION.y * m_cellSize, 0 );
-				setGrid( item.POSITION, item.SIZE, true );
+				item.MAP_ID = mapId;
+				setGrid( item.POSITION, item.SIZE, item.MAP_ID );
 				m_itemList.push( item );
 				
 				return true;
@@ -152,10 +156,39 @@ package IsoMap
 			if ( index != -1 )
 			{			
 				m_isoScene.removeChild( item.INODE );
-				setGrid( item.POSITION, item.SIZE, false );
+				setGrid( item.POSITION, item.SIZE, 0 );
 				m_itemList.splice( index, 1 );
 			}
 			
+			return true;
+		}
+		
+		/**
+		 * @desc	move a item form one position to other
+		 * @param	item
+		 * @param	destX
+		 * @param	dextY
+		 * @return
+		 */
+		public function MoveItem( item:IIsoMapItem, destX:int, destY:int ):Boolean
+		{
+			if ( m_itemList.indexOf( item ) == -1 )
+			{
+				throw new Error( "[IsoGridComponent] this item not on the map, can't be moved" );
+			}
+			
+			var destPos:Point = new Point( destX, destY );
+			
+			if ( isPlaceable( destPos, item.SIZE, item.MAP_ID ) == false )
+			{
+				return false;
+			}
+			
+			setGrid( item.POSITION, item.SIZE, 0 );
+			item.POSITION = destPos;
+			setGrid( item.POSITION, item.SIZE, item.MAP_ID );
+			item.INODE.moveTo( item.POSITION.x * m_cellSize, item.POSITION.y * m_cellSize, 0 );
+				
 			return true;
 		}
 		
@@ -212,7 +245,7 @@ package IsoMap
 		 * @param	size
 		 * @return
 		 */
-		private function isPlaceable( pos:Point, size:Point ):Boolean
+		private function isPlaceable( pos:Point, size:Point, mapID:int ):Boolean
 		{
 			var destX:int = pos.x + size.x;
 			var destY:int = pos.y + size.y;
@@ -221,7 +254,7 @@ package IsoMap
 			{
 				for ( var j:int = pos.y; j < destY; j++ )
 				{
-					if ( m_mapData[i][j] == true )
+					if ( m_mapData[i][j] > 0 && m_mapData[i][j] != mapID )
 					{
 						return false;
 					}
@@ -236,7 +269,7 @@ package IsoMap
 		 * @param	pos
 		 * @param	size
 		 */
-		private function setGrid( pos:Point, size:Point, state:Boolean ):void
+		private function setGrid( pos:Point, size:Point, state:int ):void
 		{
 			var destX:int = pos.x + size.x;
 			var destY:int = pos.y + size.y;
@@ -248,6 +281,39 @@ package IsoMap
 					m_mapData[i][j] = state;
 				}
 			}
+		}
+		
+		/**
+		 * @desc	return a available map id
+		 * @return
+		 */
+		private function getAvailableID():int
+		{
+			var len:int = m_itemList.length;
+			var nextID:int = 0;
+			
+			for ( var i:int = 1; i <= len; i++ )
+			{
+				var match:Boolean = false;
+				
+				for ( var j:int = 0; j < len; j++ )
+				{
+					if ( ( m_itemList[j] as IIsoMapItem ).MAP_ID == i )
+					{
+						match = true;
+						break;
+					}
+				}
+				
+				if ( match == false )
+				{
+					nextID = i;
+					
+					break;
+				}
+			}
+			
+			return nextID == 0 ? len + 1 : nextID;
 		}
 		
 		//-------------------------------- callback function --------------------------------

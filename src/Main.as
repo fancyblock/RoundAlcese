@@ -15,6 +15,7 @@ package
 	import UI.FiendCityScreen;
 	import UI.GameStageScreen;
 	import UI.WelcomeScreen;
+	import Utility.GameMonitor;
 	
 	/**
 	 * ...
@@ -70,10 +71,13 @@ package
 			isoMapEntity.addComponent( isoScene, "IsoScene" );
 			isoMapEntity.initialize( "IsoMap" );
 			
+			///		add a FPS monitor     ///
+			this.stage.addChild( new GameMonitor() );
+			
 			//load the level info
 			PBE.levelManager.load( "../Levels/RA_Levels.xml" );	
 			
-			//show start screen
+			//show start screen ( game entry )
 			PBE.screenManager.push( RAScreenEnum.RA_WELCOME_SCREEN );
 			
 		}

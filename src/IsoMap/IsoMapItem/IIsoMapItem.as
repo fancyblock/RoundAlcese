@@ -19,6 +19,10 @@ package IsoMap.IsoMapItem
 		function set SIZE( size:Point ):void;
 		
 		function get INODE():IIsoDisplayObject;
+		
+		function set MAP_ID( id:int ):void;
+		
+		function get MAP_ID():int;
 	}
 	
 }
