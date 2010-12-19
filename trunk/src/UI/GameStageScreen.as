@@ -62,7 +62,7 @@ package UI
 		//enter this stage
 		override protected function onEnter():void
 		{
-			PBE.levelManager.loadLevel( 1 );				//----[test]
+			PBE.levelManager.loadLevel( 1 );				//----[Load test level]
 			
 			//[unfinished]
 		}

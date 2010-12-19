@@ -39,8 +39,8 @@
 				<y>-34</y>
 			</ASSETS_OFFSET>
 			<POSITION type = "">
-				<x>0</x>
-				<y>0</y>
+				<x>2</x>
+				<y>2</y>
 			</POSITION>
 			<SIZE type = "">
 				<x>1</x>
@@ -56,8 +56,8 @@
 				<y>-32</y>
 			</ASSETS_OFFSET>
 			<POSITION type = "">
-				<x>1</x>
-				<y>0</y>
+				<x>2</x>
+				<y>7</y>
 			</POSITION>
 			<SIZE type = "">
 				<x>1</x>
@@ -73,8 +73,8 @@
 				<y>-46</y>
 			</ASSETS_OFFSET>
 			<POSITION type = "">
-				<x>2</x>
-				<y>1</y>
+				<x>7</x>
+				<y>2</y>
 			</POSITION>
 			<SIZE type = "">
 				<x>1</x>
@@ -90,8 +90,25 @@
 				<y>-34</y>
 			</ASSETS_OFFSET>
 			<POSITION type = "">
+				<x>7</x>
+				<y>7</y>
+			</POSITION>
+			<SIZE type = "">
+				<x>1</x>
+				<y>1</y>
+			</SIZE>
+		</component>
+	</entity>
+
+	<!-- put a hero to the map -->
+	<entity name = "Hero">
+		<component type = "IsoMap.IsoMapItem.IsoMapItem" name = "HeroItem">
+			<GRID_MAP componentReference = "MapGrid" componentName = "Grid"/>
+			<ITEM_ASSETS>../assets/HeroTest.swf</ITEM_ASSETS>
+			<IS_SWF_ASSETS>true</IS_SWF_ASSETS>
+			<POSITION type = "">
 				<x>5</x>
-				<y>2</y>
+				<y>4</y>
 			</POSITION>
 			<SIZE type = "">
 				<x>1</x>
@@ -105,6 +122,7 @@
 		<objectReference name = "MapGrid"/>
 		<objectReference name = "MapCamera"/>
 		<objectReference name = "Decorations"/>
+		<objectReference name = "Hero"/>
 	</group>
   
 </things>

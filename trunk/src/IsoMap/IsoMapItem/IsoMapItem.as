@@ -24,13 +24,14 @@ package IsoMap.IsoMapItem
 		
 		private var m_position:Point = null;
 		private var m_size:Point = null;
+		private var m_mapID:int = 0;
 		
 		private var m_isoItem:IsoSprite = null;
 		
 		private var m_map:IsoGridComponent = null;
 		private var m_assetsPath:String = null;
 		private var m_isSwfAsset:Boolean = false;
-		private var m_assetsOffset:Point = null;
+		private var m_assetsOffset:Point = new Point();
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -118,6 +119,22 @@ package IsoMap.IsoMapItem
 			return m_isoItem;
 		}
 		
+		/**
+		 * @desc	set the map id
+		 */
+		public function set MAP_ID( id:int ):void
+		{
+			m_mapID = id;
+		}
+		
+		/**
+		 * @desc	return the map id
+		 */
+		public function get MAP_ID():int
+		{
+			return m_mapID;
+		}
+		
 		//------------------------------ private function ----------------------------------
 		
 		//callback when the item added
@@ -135,6 +152,7 @@ package IsoMap.IsoMapItem
 				PBE.resourceManager.load( m_assetsPath, ImageResource, _onImgLoadded, _onLoadFail );
 			}
 			
+			//add this item to the map
 			if ( m_map.AddItem( this ) == false )
 			{
 				throw new Error( "[IsoMapItem] this item can't be place to the map" );
