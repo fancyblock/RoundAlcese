@@ -1,5 +1,6 @@
 package IsoMap.IsoMapItem 
 {
+	import Animation.IAnimation;
 	import as3isolib.core.IIsoDisplayObject;
 	import flash.geom.Point;
 	
@@ -23,6 +24,10 @@ package IsoMap.IsoMapItem
 		function set MAP_ID( id:int ):void;
 		
 		function get MAP_ID():int;
+		
+		function Render():void;
+		
+		function get ANIMATION_HOLDER():IAnimation;
 	}
 	
 }

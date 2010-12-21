@@ -102,7 +102,7 @@
 
 	<!-- put a hero to the map -->
 	<entity name = "Hero">
-		<component type = "IsoMap.IsoMapItem.IsoMapItem" name = "HeroItem">
+		<component type = "IsoMap.IsoMapItem.IsoMover" name = "HeroItem">
 			<GRID_MAP componentReference = "MapGrid" componentName = "Grid"/>
 			<ITEM_ASSETS>../assets/HeroTest.swf</ITEM_ASSETS>
 			<IS_SWF_ASSETS>true</IS_SWF_ASSETS>
@@ -114,6 +114,10 @@
 				<x>1</x>
 				<y>1</y>
 			</SIZE>
+			<SPEED>0.5</SPEED>
+		</component>
+		<component type = "z_dev_test.KeyboardControlComponent" name = "HeroController">
+			<POS_HOLDER>@HeroItem.NextDir</POS_HOLDER>
 		</component>
 	</entity>
 

@@ -1,8 +1,8 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="assets/walkDir0" itemID="4d031cba-000001ef" sourceLibraryItemHRef="元件 1" lastModified="1292051600">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="assets/walkDir0" itemID="4d031cba-000001ef" sourceLibraryItemHRef="元件 1" lastModified="1292854015">
   <timeline>
-    <DOMTimeline name="walkDir0" currentFrame="23">
+    <DOMTimeline name="walkDir0" currentFrame="15">
       <layers>
-        <DOMLayer name="mask" color="#9933CC" locked="true" current="true" isSelected="true" autoNamed="false" layerType="mask">
+        <DOMLayer name="mask" color="#9933CC" locked="true" autoNamed="false" layerType="mask">
           <frames>
             <DOMFrame index="0" duration="24" keyMode="9728">
               <elements>
@@ -15,7 +15,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="图层 1" color="#4FFF4F" parentLayerIndex="0" locked="true">
+        <DOMLayer name="图层 1" color="#4FFF4F" parentLayerIndex="0" locked="true" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" duration="8" keyMode="9728">
               <elements>

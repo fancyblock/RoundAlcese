@@ -6,6 +6,7 @@ package UI
 	import flash.events.MouseEvent;
 	import IsoMap.IsoSceneComponent;
 	import RAEnums.RAScreenEnum;
+	import RAEvents.RAEvent;
 	
 	/**
 	 * ...
@@ -86,9 +87,9 @@ package UI
 		//callback when level load finished
 		private function _onLevelLoaded( evt:LevelEvent ):void
 		{
-			var scene:IsoSceneComponent = PBE.lookupEntity( "IsoMap" ).lookupComponentByName( "IsoScene" ) as IsoSceneComponent;
+			PBE.lookupEntity( "IsoMap" ).eventDispatcher.dispatchEvent( new RAEvent( RAEvent.RA_EVENT_RenderMap ) );
 			
-			scene.Render();
+			//[unfinished]
 		}
 		
 	}

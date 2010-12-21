@@ -3,7 +3,7 @@
           <DOMFolderItem name="assets" itemID="4d031eed-0000023a" isExpanded="true"/>
      </folders>
      <media>
-          <DOMBitmapItem name="assets/walk.png" itemID="4d031f02-0000023b" sourceExternalFilepath="C:\Documents and Settings\Administrator\桌面\PBETest\data\LIBRARY\assets\walk.png" sourceLastImported="1292650660" externalFileSize="9603" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="assets\walk.png" bitmapDataHRef="M 2 1292049513.dat" frameRight="1440" frameBottom="2560"/>
+          <DOMBitmapItem name="assets/walk.png" itemID="4d0f632f-000001e9" sourceExternalFilepath=".\LIBRARY\assets\walk.png" sourceLastImported="1292650660" externalFileSize="9603" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="assets\walk.png" bitmapDataHRef="M 2 1292049513.dat" frameRight="1440" frameBottom="2560"/>
      </media>
      <symbols>
           <Include href="assets/mask.xml" loadImmediate="false"/>
@@ -11,31 +11,65 @@
           <Include href="assets/walkDir3.xml" loadImmediate="false"/>
           <Include href="assets/walkDir6.xml" loadImmediate="false"/>
           <Include href="assets/walkDir9.xml" loadImmediate="false"/>
+          <Include href="stand_dir0.xml" loadImmediate="false"/>
+          <Include href="stand_dir3.xml" loadImmediate="false"/>
+          <Include href="stand_dir6.xml" loadImmediate="false"/>
+          <Include href="stand_dir9.xml" loadImmediate="false"/>
      </symbols>
      <timelines>
-          <DOMTimeline name="场景 1" currentFrame="15">
+          <DOMTimeline name="场景 1">
                <layers>
                     <DOMLayer name="as" color="#9933CC" locked="true" autoNamed="false">
                          <frames>
-                              <DOMFrame index="0" duration="5" name="DIR0" labelType="name" keyMode="9728">
+                              <DOMFrame index="0" keyMode="9728">
                                    <Actionscript>
                                         <script><![CDATA[stop();]]></script>
                                    </Actionscript>
                                    <elements/>
                               </DOMFrame>
-                              <DOMFrame index="5" duration="5" name="DIR3" labelType="name" keyMode="9728">
+                              <DOMFrame index="1" duration="10" name="RUN_DIR0" labelType="name" keyMode="9728">
                                    <Actionscript>
                                         <script><![CDATA[stop();]]></script>
                                    </Actionscript>
                                    <elements/>
                               </DOMFrame>
-                              <DOMFrame index="10" duration="5" name="DIR6" labelType="name" keyMode="9728">
+                              <DOMFrame index="11" duration="10" name="RUN_DIR3" labelType="name" keyMode="9728">
                                    <Actionscript>
                                         <script><![CDATA[stop();]]></script>
                                    </Actionscript>
                                    <elements/>
                               </DOMFrame>
-                              <DOMFrame index="15" duration="5" name="DIR9" labelType="name" keyMode="9728">
+                              <DOMFrame index="21" duration="10" name="RUN_DIR6" labelType="name" keyMode="9728">
+                                   <Actionscript>
+                                        <script><![CDATA[stop();]]></script>
+                                   </Actionscript>
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="31" duration="10" name="RUN_DIR9" labelType="name" keyMode="9728">
+                                   <Actionscript>
+                                        <script><![CDATA[stop();]]></script>
+                                   </Actionscript>
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="41" duration="10" name="DIR_0" labelType="name" keyMode="9728">
+                                   <Actionscript>
+                                        <script><![CDATA[stop();]]></script>
+                                   </Actionscript>
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="51" duration="10" name="DIR_3" labelType="name" keyMode="9728">
+                                   <Actionscript>
+                                        <script><![CDATA[stop();]]></script>
+                                   </Actionscript>
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="61" duration="10" name="DIR_6" labelType="name" keyMode="9728">
+                                   <Actionscript>
+                                        <script><![CDATA[stop();]]></script>
+                                   </Actionscript>
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="71" duration="10" name="DIR_9" labelType="name" keyMode="9728">
                                    <Actionscript>
                                         <script><![CDATA[stop();]]></script>
                                    </Actionscript>
@@ -45,7 +79,19 @@
                     </DOMLayer>
                     <DOMLayer name="ani" color="#4FFF4F" locked="true" current="true" isSelected="true" autoNamed="false">
                          <frames>
-                              <DOMFrame index="0" duration="5" keyMode="9728">
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="stand_dir0" name="">
+                                             <matrix>
+                                                  <Matrix tx="-12.15" ty="-8.3"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="12" y="32"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="1" duration="10" keyMode="9728">
                                    <elements>
                                         <DOMSymbolInstance libraryItemName="assets/walkDir0" name="">
                                              <matrix>
@@ -57,7 +103,7 @@
                                         </DOMSymbolInstance>
                                    </elements>
                               </DOMFrame>
-                              <DOMFrame index="5" duration="5" keyMode="9728">
+                              <DOMFrame index="11" duration="10" keyMode="9728">
                                    <elements>
                                         <DOMSymbolInstance libraryItemName="assets/walkDir3" name="">
                                              <matrix>
@@ -69,7 +115,7 @@
                                         </DOMSymbolInstance>
                                    </elements>
                               </DOMFrame>
-                              <DOMFrame index="10" duration="5" keyMode="9728">
+                              <DOMFrame index="21" duration="10" keyMode="9728">
                                    <elements>
                                         <DOMSymbolInstance libraryItemName="assets/walkDir6" name="">
                                              <matrix>
@@ -81,7 +127,7 @@
                                         </DOMSymbolInstance>
                                    </elements>
                               </DOMFrame>
-                              <DOMFrame index="15" duration="5" keyMode="9728">
+                              <DOMFrame index="31" duration="10" keyMode="9728">
                                    <elements>
                                         <DOMSymbolInstance libraryItemName="assets/walkDir9" name="">
                                              <matrix>
@@ -89,6 +135,54 @@
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="36" y="64"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="41" duration="10" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="stand_dir0" name="">
+                                             <matrix>
+                                                  <Matrix tx="-12.15" ty="-8.3"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="12" y="32"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="51" duration="10" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="stand_dir3" name="">
+                                             <matrix>
+                                                  <Matrix tx="-12.15" ty="-8.3"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="12"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="61" duration="10" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="stand_dir6" name="">
+                                             <matrix>
+                                                  <Matrix tx="-12.15" ty="-8.3"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="12" y="-32"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="71" duration="10" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="stand_dir9" name="">
+                                             <matrix>
+                                                  <Matrix tx="-12.15" ty="-8.3"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="12" y="64"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
                                    </elements>
@@ -401,15 +495,8 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="4515" publishTime="1292650910"/>
-          <PublishItem publishSize="4517" publishTime="1292650765"/>
-          <PublishItem publishSize="4148" publishTime="1292650682"/>
-          <PublishItem publishSize="4354" publishTime="1292051488"/>
-          <PublishItem publishSize="4366" publishTime="1292051479"/>
-          <PublishItem publishSize="4355" publishTime="1292050192"/>
-          <PublishItem publishSize="4102" publishTime="1292049993"/>
-          <PublishItem publishSize="4075" publishTime="1292049951"/>
-          <PublishItem publishSize="4054" publishTime="1292049876"/>
-          <PublishItem publishSize="4027" publishTime="1292049806"/>
+          <PublishItem publishSize="4730" publishTime="1292854289"/>
+          <PublishItem publishSize="4734" publishTime="1292854250"/>
+          <PublishItem publishSize="4661" publishTime="1292853961"/>
      </publishHistory>
 </DOMDocument>
