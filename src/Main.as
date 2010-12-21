@@ -85,7 +85,7 @@ package
 			PBE.screenManager.push( RAScreenEnum.RA_WELCOME_SCREEN );
 			
 			//----
-			PBE.soundManager.muted = true;
+		//	PBE.soundManager.muted = true;
 			
 		}
 		

@@ -103,6 +103,13 @@ package IsoMap.IsoMapItem
 				break;
 			}
 			
+			// if the dest pos can't arrive , stop move
+			if ( this.GRID_MAP.IsArriveable( nextPos.x, nextPos.y, this ) == false )
+			{
+				ANIMATION_HOLDER.PlayAni( m_stopAni );
+				return;
+			}
+			
 			m_destPos = nextPos;
 			
 			m_curMapPos.x = this.INODE.x;
