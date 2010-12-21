@@ -1,22 +1,21 @@
 package IsoMap.IsoMapItem 
 {
+	import Animation.IAnimation;
+	import Animation.StaticAnimation;
+	import Animation.SwfAnimation;
 	import as3isolib.core.IIsoDisplayObject;
 	import as3isolib.display.IsoSprite;
-	import com.pblabs.engine.entity.EntityComponent;
-	import com.pblabs.engine.PBE;
-	import com.pblabs.engine.resource.ImageResource;
-	import com.pblabs.engine.resource.Resource;
-	import com.pblabs.engine.resource.SWFResource;
-	import flash.display.Sprite;
+	import com.pblabs.engine.components.TickedComponent;
 	import flash.geom.Point;
 	import IsoMap.IsoGridComponent;
+	import RAEvents.RAEvent;
 	
 	/**
 	 * ...
 	 * @author	Hejiabin
 	 * @date	2010-12-17 14:36
 	 */
-	public class IsoMapItem extends EntityComponent implements IIsoMapItem 
+	public class IsoMapItem extends TickedComponent implements IIsoMapItem 
 	{
 		//------------------------------ static member -------------------------------------
 		
@@ -33,6 +32,8 @@ package IsoMap.IsoMapItem
 		private var m_isSwfAsset:Boolean = false;
 		private var m_assetsOffset:Point = new Point();
 		
+		private var m_animationHolder:IAnimation = null;
+		
 		//------------------------------ public function -----------------------------------
 		
 		/**
@@ -46,11 +47,27 @@ package IsoMap.IsoMapItem
 		}
 		
 		/**
-		 * @desc	set the gridmap
+		 * @desc	set the grid map
 		 */
 		public function set GRID_MAP( gridMap:IsoGridComponent ):void
 		{
 			m_map = gridMap;
+		}
+		
+		/**
+		 * @desc 	return the animation controller
+		 */
+		public function get ANIMATION_HOLDER():IAnimation
+		{
+			return m_animationHolder;
+		}
+		
+		/**
+		 * @desc	get the grid map
+		 */
+		public function get GRID_MAP():IsoGridComponent
+		{
+			return m_map;
 		}
 		
 		/**
@@ -135,6 +152,17 @@ package IsoMap.IsoMapItem
 			return m_mapID;
 		}
 		
+		/**
+		 * @desc	render this item
+		 */
+		public function Render():void
+		{
+			var evt:RAEvent = new RAEvent( RAEvent.RA_EVENT_RenderItem );
+			evt.RA_EVT_Info = m_isoItem;
+			
+			m_isoItem.parent.dispatchEvent( evt );
+		}
+		
 		//------------------------------ private function ----------------------------------
 		
 		//callback when the item added
@@ -145,12 +173,26 @@ package IsoMap.IsoMapItem
 			//load the item assets
 			if ( m_isSwfAsset == true )
 			{
-				PBE.resourceManager.load( m_assetsPath, SWFResource, _onSwfLoadded, _onLoadFail );
+				var swfAssets:SwfAnimation = new SwfAnimation();
+				swfAssets.LoadAssets( m_assetsPath );
+				swfAssets.x = m_assetsOffset.x;
+				swfAssets.y = m_assetsOffset.y;
+				m_animationHolder = swfAssets;
+				
+				m_isoItem.sprites = [swfAssets];
 			}
 			else
 			{
-				PBE.resourceManager.load( m_assetsPath, ImageResource, _onImgLoadded, _onLoadFail );
+				var picAssets:StaticAnimation = new StaticAnimation();
+				picAssets.LoadAssets( m_assetsPath );
+				picAssets.x = m_assetsOffset.x;
+				picAssets.y = m_assetsOffset.y;
+				m_animationHolder = picAssets;
+				
+				m_isoItem.sprites = [picAssets];
 			}
+			
+			m_isoItem.render();
 			
 			//add this item to the map
 			if ( m_map.AddItem( this ) == false )
@@ -168,35 +210,6 @@ package IsoMap.IsoMapItem
 		}
 		
 		//------------------------------- event callback -----------------------------------
-		
-		//callback when swf assets load finished
-		private function _onSwfLoadded( resource:SWFResource ):void
-		{
-			var itemAssets:Sprite = resource.clip;
-			itemAssets.x = m_assetsOffset.x;
-			itemAssets.y = m_assetsOffset.y;
-			
-			m_isoItem.sprites = [itemAssets];
-			m_isoItem.render();
-		}
-		
-		//callback when image assets load finished
-		private function _onImgLoadded( resource:ImageResource ):void
-		{
-			var itemAssets:Sprite = new Sprite();
-			itemAssets.addChild( resource.image );
-			itemAssets.x = m_assetsOffset.x;
-			itemAssets.y = m_assetsOffset.y;
-			
-			m_isoItem.sprites = [itemAssets];
-			m_isoItem.render();
-		}
-		
-		//callback when assets load fail
-		private function _onLoadFail( resource:Resource ):void
-		{
-			throw new Error( "[IsoMapItem]: grid load fail" );
-		}
 		
 	}
 

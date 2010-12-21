@@ -8,6 +8,7 @@ package
 	import IsoMap.IsoCameraComponent;
 	import IsoMap.IsoGridComponent;
 	import IsoMap.IsoMapItem.IsoMapItem;
+	import IsoMap.IsoMapItem.IsoMover;
 	import IsoMap.IsoSceneComponent;
 	import IsoMap.IsoViewComponent;
 	import RAEnums.RAScreenEnum;
@@ -16,6 +17,7 @@ package
 	import UI.GameStageScreen;
 	import UI.WelcomeScreen;
 	import Utility.GameMonitor;
+	import z_dev_test.KeyboardControlComponent;
 	
 	/**
 	 * ...
@@ -40,6 +42,8 @@ package
 			PBE.registerType( IsoGridComponent );
 			PBE.registerType( IsoCameraComponent );
 			PBE.registerType( IsoMapItem );
+			PBE.registerType( IsoMover );
+			PBE.registerType( KeyboardControlComponent );
 			//[unfinished]
 			
 			//startup the engine
@@ -79,6 +83,9 @@ package
 			
 			//show start screen ( game entry )
 			PBE.screenManager.push( RAScreenEnum.RA_WELCOME_SCREEN );
+			
+			//----
+			PBE.soundManager.muted = true;
 			
 		}
 		

@@ -188,7 +188,7 @@ package IsoMap
 			item.POSITION = destPos;
 			setGrid( item.POSITION, item.SIZE, item.MAP_ID );
 			item.INODE.moveTo( item.POSITION.x * m_cellSize, item.POSITION.y * m_cellSize, 0 );
-				
+			
 			return true;
 		}
 		

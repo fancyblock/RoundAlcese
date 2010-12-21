@@ -2,8 +2,8 @@ package IsoMap
 {
 	import as3isolib.display.scene.IIsoScene;
 	import as3isolib.display.scene.IsoScene;
-	import as3isolib.events.IsoEvent;
 	import com.pblabs.engine.entity.EntityComponent;
+	import RAEvents.RAEvent;
 	
 	/**
 	 * ...
@@ -29,8 +29,6 @@ package IsoMap
 			
 			//instance the scene
 			m_isoScene = new IsoScene();
-			m_isoScene.addEventListener( IsoEvent.CHILD_ADDED, _onChildAdd );
-			m_isoScene.addEventListener( IsoEvent.CHILD_REMOVED, _onChildRemove );
 		}
 		
 		/**
@@ -52,19 +50,38 @@ package IsoMap
 		
 		//------------------------------ private function ----------------------------------
 		
+		//callback when scene add
+		override protected function onAdd () : void
+		{
+			owner.eventDispatcher.addEventListener( RAEvent.RA_EVENT_RenderMap, _onRenderMap );
+			
+			m_isoScene.addEventListener( RAEvent.RA_EVENT_RenderItem, _onRenderItem );
+		}
+
+		//callback when scene removed
+		override protected function onRemove () : void
+		{
+			owner.eventDispatcher.removeEventListener( RAEvent.RA_EVENT_RenderMap, _onRenderMap );
+			
+			m_isoScene.removeEventListener( RAEvent.RA_EVENT_RenderItem, _onRenderItem );
+		}
+		
 		//------------------------------- event callback -----------------------------------
 		
-		//callback when child added
-		private function _onChildAdd( evt:IsoEvent ):void
+		//render callback
+		private function _onRenderMap( evt:RAEvent ):void
 		{
+			this.Render();
+		}
+		
+		//render callback
+		private function _onRenderItem( evt:RAEvent ):void
+		{
+			m_isoScene.render();				//----------[temp]
+			
 			//[unfinished]
 		}
 		
-		//callback when child removed
-		private function _onChildRemove( evt:IsoEvent ):void
-		{
-			//[unfinished]
-		}
 	}
 
 }
