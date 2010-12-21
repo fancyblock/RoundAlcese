@@ -192,6 +192,22 @@ package IsoMap
 			return true;
 		}
 		
+		/**
+		 * @desc	judge if the dest can arriveable
+		 * @param	xpos
+		 * @param	ypos
+		 * @param	item
+		 * @return
+		 */
+		public function IsArriveable( xpos:int, ypos:int, item:IIsoMapItem ):Boolean
+		{
+			if ( item.MAP_ID == 0 ) return false;
+			
+			if ( xpos < 0 || ypos < 0 || xpos + item.SIZE.x > m_gridSize.x || ypos + item.SIZE.y > m_gridSize.y ) return false;
+			
+			return isPlaceable( new Point( xpos, ypos ), item.SIZE, item.MAP_ID );
+		}
+		
 		//-------------------------------- private function ---------------------------------
 		
 		//callback when grid add to the scene

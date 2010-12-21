@@ -114,7 +114,7 @@
 				<x>1</x>
 				<y>1</y>
 			</SIZE>
-			<SPEED>0.5</SPEED>
+			<SPEED>1.0</SPEED>
 		</component>
 		<component type = "z_dev_test.KeyboardControlComponent" name = "HeroController">
 			<POS_HOLDER>@HeroItem.NextDir</POS_HOLDER>
