@@ -116,8 +116,9 @@
 			</SIZE>
 			<SPEED>1.0</SPEED>
 		</component>
-		<component type = "z_dev_test.KeyboardControlComponent" name = "HeroController">
-			<POS_HOLDER>@HeroItem.NextDir</POS_HOLDER>
+		<component type = "z_dev_test.TestAIComponent" name = "AI">
+			<GridMap componentReference = "MapGrid" componentName = "Grid"/>
+			<Behavior_Holder>@HeroItem.BEHAVIOR</Behavior_Holder>
 		</component>
 	</entity>
 

@@ -2,6 +2,7 @@ package IsoMap.IsoMapItem
 {
 	import as3isolib.display.scene.IsoScene;
 	import flash.geom.Point;
+	import GameLogic.BehaviorHolder;
 	/**
 	 * ...
 	 * @author	Hejiabin
@@ -32,6 +33,8 @@ package IsoMap.IsoMapItem
 		
 		private var m_command:int = 0;
 		
+		private var m_behaviorHolder:BehaviorHolder = null;
+		
 		//-------------------------------- public function ----------------------------------
 		
 		/**
@@ -48,6 +51,14 @@ package IsoMap.IsoMapItem
 		public function set SPEED( value:Number ):void
 		{
 			m_speed = value;
+		}
+		
+		/**
+		 * @desc	return the behavior holder of this mover
+		 */
+		public function get BEHAVIOR():BehaviorHolder
+		{
+			return m_behaviorHolder;
 		}
 		
 		/**
@@ -163,6 +174,16 @@ package IsoMap.IsoMapItem
 		}
 		
 		//-------------------------------- private function ---------------------------------
+		
+		//callback when the item added
+		override protected function onAdd () : void
+		{
+			super.onAdd();
+			
+			m_behaviorHolder = new BehaviorHolder();
+			m_behaviorHolder.Position = this.POSITION;
+			m_behaviorHolder.AniHolder = this.ANIMATION_HOLDER;
+		}
 		
 		//-------------------------------- callback function --------------------------------
 		

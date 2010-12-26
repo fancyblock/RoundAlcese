@@ -3,14 +3,19 @@ package IsoMap
 	import as3isolib.display.IsoSprite;
 	import as3isolib.display.scene.IIsoScene;
 	import as3isolib.display.scene.IsoGrid;
+	import as3isolib.geom.Pt;
 	import com.pblabs.engine.entity.EntityComponent;
 	import com.pblabs.engine.PBE;
 	import com.pblabs.engine.resource.ImageResource;
 	import com.pblabs.engine.resource.Resource;
 	import com.pblabs.engine.resource.SWFResource;
+	import eDpLib.events.ProxyEvent;
 	import flash.display.Sprite;
 	import flash.geom.Point;
 	import IsoMap.IsoMapItem.IIsoMapItem;
+	import flash.events.MouseEvent;
+	import as3isolib.geom.IsoMath;
+	import RAEvents.RAEvent;
 	
 	/**
 	 * ...
@@ -52,6 +57,7 @@ package IsoMap
 			m_isoGrid = new IsoSprite();
 			m_isoGrid.setSize( 0, 0, 0 );
 			m_isoGrid.moveTo( 0, 0, 0 );
+			m_isoGrid.addEventListener( MouseEvent.CLICK, _onClickGrid );
 		}
 		
 		/**
@@ -193,7 +199,7 @@ package IsoMap
 		}
 		
 		/**
-		 * @desc	judge if the dest can arriveable
+		 * @desc	judge if the dest can arriveable, only can be used to the item that already on the map
 		 * @param	xpos
 		 * @param	ypos
 		 * @param	item
@@ -206,6 +212,35 @@ package IsoMap
 			if ( xpos < 0 || ypos < 0 || xpos + item.SIZE.x > m_gridSize.x || ypos + item.SIZE.y > m_gridSize.y ) return false;
 			
 			return isPlaceable( new Point( xpos, ypos ), item.SIZE, item.MAP_ID );
+		}
+		
+		/**
+		 * @desc	judge if the dest can place a item
+		 * @param	pos
+		 * @param	size
+		 * @return
+		 */
+		public function IsPlaceable( pos:Point, size:Point = null ):Boolean
+		{
+			var sizeX:int = ( size == null ? 1 : size.x );
+			var sizeY:int = ( size == null ? 1 : size.y );
+			
+			if ( pos.x < 0 || pos.y < 0 || pos.x + sizeX > m_gridSize.x || pos.y + sizeY > m_gridSize.y ) return false;
+			
+			return isPlaceable( pos, null, 0 );
+		}
+		
+		/**
+		 * @desc	translate screen coordinate to grid coordinate
+		 * @param	xpos
+		 * @param	ypos
+		 * @return
+		 */
+		public function ScreenToGrid( xpos:Number, ypos:Number ):Point
+		{
+			var pos:Point = new Point( int( xpos / m_cellSize ), int( ypos / m_cellSize ) );
+			
+			return pos;
 		}
 		
 		//-------------------------------- private function ---------------------------------
@@ -263,8 +298,11 @@ package IsoMap
 		 */
 		private function isPlaceable( pos:Point, size:Point, mapID:int ):Boolean
 		{
-			var destX:int = pos.x + size.x;
-			var destY:int = pos.y + size.y;
+			var realSizeX:int = ( size == null ? 1 : size.x );
+			var realSizeY:int = ( size == null ? 1 : size.y );
+			
+			var destX:int = pos.x + realSizeX;
+			var destY:int = pos.y + realSizeY;
 			
 			for ( var i:int = pos.x; i < destX; i++ )
 			{
@@ -361,6 +399,22 @@ package IsoMap
 		private function _onLoadFail( resource:Resource ):void
 		{
 			throw new Error( "[IsoGridComponent]: grid load fail" );
+		}
+		
+		//callback when click the grid
+		private function _onClickGrid( evt:ProxyEvent ):void
+		{
+			//calculate the grid coordinate
+			var mouseEvt:MouseEvent = evt.targetEvent as MouseEvent;
+			var pt:Pt = new Pt( mouseEvt.localX + m_assetsOffset.x, mouseEvt.localY + m_assetsOffset.y );
+			IsoMath.screenToIso( pt );
+			
+			//dispatch event
+			var gridPos:Point = new Point( int( pt.x / m_cellSize ), int( pt.y / m_cellSize ) );
+			var gridEvt:RAEvent = new RAEvent( RAEvent.RA_EVENT_ClickGrid );
+			gridEvt.RA_EVT_Info = gridPos;
+			
+			this.owner.eventDispatcher.dispatchEvent( gridEvt );
 		}
 		
 	}

@@ -1,0 +1,64 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="board2Ani" itemID="4d15ab34-000001fe" sourceLibraryItemHRef="元件 1" lastModified="1293266371" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="board2Ani" currentFrame="25">
+      <layers>
+        <DOMLayer name="as" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="52" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="ani" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="14" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="billBoard2" name="">
+                  <transformationPoint>
+                    <Point x="179.45" y="37"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="14" duration="23" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="billBoard2" name="">
+                  <matrix>
+                    <Matrix tx="-358"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="179.45" y="37"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="37" duration="14" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="billBoard2" name="">
+                  <matrix>
+                    <Matrix tx="-358"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="179.45" y="37"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="51" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="billBoard2" name="">
+                  <transformationPoint>
+                    <Point x="179.45" y="37"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

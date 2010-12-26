@@ -1,18 +1,67 @@
 <DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#000000" width="750" height="600" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" adjustViewAngle3D="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <folders>
+          <DOMFolderItem name="assets" itemID="4d15aa5e-000001e9" isExpanded="true"/>
           <DOMFolderItem name="buttons tube double" itemID="4d08e024-0000031c"/>
      </folders>
      <media>
-          <DOMBitmapItem name="alcese" itemID="4d07736e-000001e0" sourceExternalFilepath=".\LIBRARY\actor_bg.png" sourceLastImported="1292427245" externalFileSize="9528" originalCompressionType="lossless" quality="50" href="alcese.png" bitmapDataHRef="M 1 1292333816.dat" frameRight="4960" frameBottom="1460"/>
-          <DOMBitmapItem name="evil" itemID="4d077373-000001e1" sourceExternalFilepath=".\LIBRARY\monster_bg.png" sourceLastImported="1292427245" externalFileSize="11391" originalCompressionType="lossless" quality="50" href="evil.png" bitmapDataHRef="M 2 1292333835.dat" frameRight="5140" frameBottom="1540"/>
+          <DOMBitmapItem name="11.png" itemID="4d15db86-00000216" sourceExternalFilepath=".\LIBRARY\11.png" sourceLastImported="1293277434" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="11.png" bitmapDataHRef="M 5 1293277550.dat" frameRight="8060" frameBottom="4380"/>
+          <DOMBitmapItem name="assets/alcese" itemID="4d15aa70-000001eb" sourceExternalFilepath=".\LIBRARY\assets\alcese.png" sourceLastImported="1293265520" externalFileSize="9528" originalCompressionType="lossless" quality="50" href="assets\alcese.png" bitmapDataHRef="M 1 1292333816.dat" frameRight="4960" frameBottom="1460"/>
+          <DOMBitmapItem name="assets/evil" itemID="4d15aa70-000001ec" sourceExternalFilepath=".\LIBRARY\assets\evil.png" sourceLastImported="1293265520" externalFileSize="11391" originalCompressionType="lossless" quality="50" href="assets\evil.png" bitmapDataHRef="M 2 1292333835.dat" frameRight="5140" frameBottom="1540"/>
+          <DOMBitmapItem name="assets/label.png" itemID="4d15aa70-000001ed" sourceExternalFilepath=".\LIBRARY\assets\label.png" sourceLastImported="1293265520" externalFileSize="17167" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="assets\label.png" bitmapDataHRef="M 3 1293265269.dat" frameRight="19200" frameBottom="7680"/>
      </media>
      <symbols>
+          <Include href="billBoard1.xml" loadImmediate="false"/>
+          <Include href="billBoard2.xml" loadImmediate="false"/>
+          <Include href="board1Ani.xml" loadImmediate="false"/>
+          <Include href="board2Ani.xml" loadImmediate="false"/>
+          <Include href="boardBG.xml" loadImmediate="false"/>
           <Include href="buttons tube double/tube double blue.xml" itemIcon="0" loadImmediate="false"/>
+          <Include href="noticeBoard.xml" loadImmediate="false"/>
      </symbols>
      <timelines>
           <DOMTimeline name="场景 1">
                <layers>
-                    <DOMLayer name="btn" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+                    <DOMLayer name="图层 3" color="#FF800A" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="noticeBoard" name="" selected="true">
+                                             <matrix>
+                                                  <Matrix tx="382.65" ty="272.25"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="billboard" color="#9933CC" locked="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="board1Ani" name="mcFiendTurn">
+                                             <matrix>
+                                                  <Matrix tx="750" ty="232.35"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="179.95" y="37"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="board2Ani" name="mcEnemyTurn">
+                                             <matrix>
+                                                  <Matrix tx="750.05" ty="232.3"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="179.45" y="37"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="btn" color="#9933CC" locked="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
@@ -28,16 +77,16 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="图层 1" color="#4FFF4F" locked="true">
+                    <DOMLayer name="infoBoard" color="#4FFF4F" locked="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMBitmapInstance name="" referenceID="" libraryItemName="alcese">
+                                        <DOMBitmapInstance name="" referenceID="" libraryItemName="assets/alcese">
                                              <matrix>
                                                   <Matrix tx="2" ty="2"/>
                                              </matrix>
                                         </DOMBitmapInstance>
-                                        <DOMBitmapInstance name="" referenceID="" libraryItemName="evil">
+                                        <DOMBitmapInstance name="" referenceID="" libraryItemName="assets/evil">
                                              <matrix>
                                                   <Matrix tx="488" ty="518.95"/>
                                              </matrix>
@@ -352,6 +401,11 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="22255" publishTime="1293266999"/>
+          <PublishItem publishSize="22254" publishTime="1293266380"/>
+          <PublishItem publishSize="22256" publishTime="1293266310"/>
+          <PublishItem publishSize="22253" publishTime="1293265978"/>
+          <PublishItem publishSize="22097" publishTime="1293265698"/>
           <PublishItem publishSize="11537" publishTime="1292333846"/>
           <PublishItem publishSize="530" publishTime="1292333731"/>
           <PublishItem publishSize="530" publishTime="1292333698"/>
