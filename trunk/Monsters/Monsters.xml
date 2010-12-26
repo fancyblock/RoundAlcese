@@ -1,0 +1,20 @@
+<things version = "1">
+	<template name = "TestMonster">
+		<component type = "IsoMap.IsoMapItem.IsoMapItem" name = "Ghost">
+			<ITEM_ASSETS>../assets/ghost.png</ITEM_ASSETS>
+			<IS_SWF_ASSETS>false</IS_SWF_ASSETS>
+			<ASSETS_OFFSET type = "">
+				<x>-22</x>
+				<y>-13</y>
+			</ASSETS_OFFSET>
+			<POSITION type = "">
+				<x>0</x>
+				<y>0</y>
+			</POSITION>
+			<SIZE type = "">
+				<x>1</x>
+				<y>1</y>
+			</SIZE>
+		</component>
+	</template>
+</things>

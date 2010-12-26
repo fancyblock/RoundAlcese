@@ -52,6 +52,14 @@ package IsoMap.IsoMapItem
 		public function set GRID_MAP( gridMap:IsoGridComponent ):void
 		{
 			m_map = gridMap;
+			
+			if ( this.isRegistered == true )
+			{
+				if ( m_map.AddItem( this ) == false )
+				{
+					throw new Error( "[IsoMapItem] this item can't be place to the map" );
+				}
+			}
 		}
 		
 		/**
@@ -195,9 +203,12 @@ package IsoMap.IsoMapItem
 			m_isoItem.render();
 			
 			//add this item to the map
-			if ( m_map.AddItem( this ) == false )
+			if ( m_map != null )
 			{
-				throw new Error( "[IsoMapItem] this item can't be place to the map" );
+				if ( m_map.AddItem( this ) == false )
+				{
+					throw new Error( "[IsoMapItem] this item can't be place to the map" );
+				}
 			}
 		}
 		

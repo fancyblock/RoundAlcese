@@ -1,10 +1,12 @@
 package 
 {
+	import com.pblabs.components.basic.EventSoundTrigger;
 	import com.pblabs.engine.entity.IEntity;
 	import com.pblabs.engine.PBE;
 	import com.pblabs.rendering2D.ui.SceneView;
 	import flash.display.Sprite;
 	import flash.system.fscommand;
+	import GameLogic.MonsterManager;
 	import IsoMap.IsoCameraComponent;
 	import IsoMap.IsoGridComponent;
 	import IsoMap.IsoMapItem.IsoMapItem;
@@ -18,6 +20,7 @@ package
 	import UI.WelcomeScreen;
 	import Utility.GameMonitor;
 	import z_dev_test.KeyboardControlComponent;
+	import z_dev_test.TestAIComponent;
 	
 	/**
 	 * ...
@@ -44,6 +47,8 @@ package
 			PBE.registerType( IsoMapItem );
 			PBE.registerType( IsoMover );
 			PBE.registerType( KeyboardControlComponent );
+			PBE.registerType( EventSoundTrigger );
+			PBE.registerType( TestAIComponent );
 			//[unfinished]
 			
 			//startup the engine
@@ -75,6 +80,9 @@ package
 			isoMapEntity.addComponent( isoScene, "IsoScene" );
 			isoMapEntity.initialize( "IsoMap" );
 			
+			//initial the game logic
+			MonsterManager.Singleton.InitialMonsters();
+			
 			///		add a FPS monitor     ///
 			this.stage.addChild( new GameMonitor() );
 			
@@ -84,12 +92,9 @@ package
 			//show start screen ( game entry )
 			PBE.screenManager.push( RAScreenEnum.RA_WELCOME_SCREEN );
 			
-			//----
-		//	PBE.soundManager.muted = true;
-			
 		}
 		
-		//-------------------------------- private function --------------------------------
+		//-------------------------------- private function ---------------------------------
 		
 		//-------------------------------- callback function --------------------------------
 		

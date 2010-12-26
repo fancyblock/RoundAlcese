@@ -13,6 +13,10 @@ package RAEvents
 		
 		static public var RA_EVENT_RenderMap:String = "Render Map";					// render the whole map
 		static public var RA_EVENT_RenderItem:String = "Render Item";				// only render the changed item
+		static public var RA_EVENT_ClickGrid:String = "Click Grid";					// click the grid map
+		static public var RA_EVENT_ActiveDMC:String = "Active DMC";
+		static public var RA_EVENT_FreezeDMC:String = "Freeze DMC";
+		static public var RA_EVENT_CurMonster:String = "Current Monster";
 		
 		//-------------------------------- private member -----------------------------------
 		
@@ -26,9 +30,11 @@ package RAEvents
 		 * @param	bubbles
 		 * @param	cancelable
 		 */
-		public function RAEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false) 
+		public function RAEvent(type:String, addInfo:Object = null, bubbles:Boolean = false, cancelable:Boolean = false) 
 		{
-			super(type, bubbles, cancelable);	
+			super(type, bubbles, cancelable);
+			
+			m_info = addInfo;
 		}
 		
 		/**
